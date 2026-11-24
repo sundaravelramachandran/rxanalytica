@@ -1,0 +1,44 @@
+
+name: Deploy RX Analytica One UAT
+
+on:
+  push:
+    branches:
+      - uat
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rx-analytica-uat-deployment
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy UAT Landing Page
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure SSH
+        env:
+          UAT_SSH_KEY: ${{ secrets.UAT_SSH_KEY }}
+          UAT_HOST: ${{ secrets.UAT_HOST }}
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$UAT_SSH_KEY" > ~/.ssh/rx_deploy_key
+          chmod 600 ~/.ssh/rx_deploy_key
+          ssh-keyscan -H "$UAT_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy UAT website
+        env:
+          UAT_HOST: ${{ secrets.UAT_HOST }}
+          UAT_USER: ${{ secrets.UAT_USER }}
+        run: |
+          rsync -avz \
+            -e "ssh -i ~/.ssh/rx_deploy_key" \
+            ./index.html \
+            "$UAT_USER@$UAT_HOST:/var/www/rx-analytica-uat/"

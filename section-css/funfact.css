@@ -1,0 +1,556 @@
+/*================================================================================================
+    Start Funfact CSS
+===================================================================================================*/
+.ed-funfact {
+  margin-top: -178px;
+  position: relative;
+}
+.ed-funfact__inner {
+  background: var(--ed-primary-color);
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 20px 80px 20px 20px;
+}
+
+.ed-funfact__counter :is(h3, h4) {
+  color: var(--ed-white-color);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  margin-bottom: 14px;
+  line-height: 100%;
+}
+
+.ed-funfact__counter p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ed-funfact__img img {
+  width: 554px;
+  height: 316px;
+  max-width: 554px;
+  border-radius: 8px 8px 136px 8px;
+  object-fit: cover;
+}
+.ed-funfact__shape-1 {
+  position: absolute;
+  left: 49%;
+  top: 40%;
+  z-index: 2;
+}
+.ed-funfact__shape-2 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 2;
+}
+
+/* Funfact Style 2 */
+.ed-funfact.ed-funfact--style2 {
+  margin-top: 0;
+}
+.ed-funfact--style2 .ed-funfact__inner {
+  display: block;
+  border-radius: 8px;
+  background: var(--ed-white-color);
+  box-shadow: 5px 20px 51.3px 61px rgba(9, 2, 49, 0.06);
+  padding: 40px 80px 80px 80px;
+}
+.ed-funfact--style2 .ed-funfact__counter {
+  text-align: center;
+  margin-top: 40px;
+}
+.ed-funfact--style2 .ed-funfact__counter :is(h3, h4) {
+  font-size: 54px;
+  letter-spacing: -0.54px;
+  line-height: 40px;
+}
+.ed-funfact--style2 .ed-funfact__counter .color-text-1 {
+  color: #42ac98;
+}
+.ed-funfact--style2 .ed-funfact__counter .color-text-2 {
+  color: #df4343;
+}
+.ed-funfact--style2 .ed-funfact__counter .color-text-3 {
+  color: #f39200;
+}
+.ed-funfact--style2 .ed-funfact__counter .color-text-4 {
+  color: #de1ef9;
+}
+.ed-funfact--style2 .ed-funfact__counter p {
+  color: var(--ed-paragraph-color);
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .ed-funfact__img img {
+    width: 50%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .ed-funfact__inner {
+    gap: 50px;
+  }
+  .ed-funfact__content {
+    width: 50%;
+    min-width: 50%;
+  }
+
+  .ed-funfact__img {
+    min-width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.99px) {
+  .ed-funfact__img img {
+    width: 100%;
+    height: 380px;
+    max-width: 100%;
+  }
+  .ed-funfact__inner {
+    padding: 32px;
+    display: block;
+  }
+  .ed-funfact__shape-1 {
+    left: auto;
+    top: 53%;
+    right: 11%;
+  }
+  .ed-funfact__content {
+    margin-top: 40px;
+  }
+  .ed-funfact__counter.mg-btm-80 {
+    margin-bottom: 40px;
+  }
+  .ed-funfact--style2 .ed-funfact__inner {
+    padding: 40px 80px 80px 40px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ed-funfact {
+    margin-top: 0;
+  }
+  .ed-funfact__img img {
+    width: 100%;
+    height: 220px;
+  }
+  .ed-funfact__inner {
+    padding: 24px;
+    display: block;
+  }
+  .ed-funfact__counter :is(h3, h4) {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+  .ed-funfact__counter.mg-btm-80 {
+    margin-bottom: 32px;
+  }
+  .ed-funfact__content {
+    margin-top: 24px;
+  }
+
+  .ed-funfact__shape-1 {
+    left: 74%;
+  }
+  .ed-funfact--style2 .ed-funfact__inner {
+    padding: 20px 24px 40px 24px;
+  }
+  .ed-funfact--style2 .ed-funfact__counter :is(h3, h4) {
+    font-size: 40px;
+  }
+  .ed-funfact--style2 .ed-funfact__counter p {
+    font-size: 14px !important;
+  }
+  .ed-funfact--style2 .ed-funfact__counter {
+    margin-top: 20px;
+  }
+}
+
+/*================================================================================================
+    End Funfact CSS
+===================================================================================================*/
+
+/* Keep the homepage statistics section below the feature cards. */
+.ed-funfact {
+  margin-top: 0;
+  padding: 56px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fcf4 100%);
+}
+
+/* Homepage impact section - Full-width solid yellow, full height, seamless layout (no card boxes) */
+.ed-funfact {
+  margin-top: 0;
+  padding: 88px 0;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: #ffcd20 !important;
+  width: 100%;
+}
+
+.ed-funfact .container {
+  width: 100%;
+}
+
+.ed-funfact .ed-funfact__shapes {
+  display: block;
+  pointer-events: none;
+}
+
+.ed-funfact .ed-funfact__shape-1 {
+  position: absolute;
+  top: 10%;
+  right: 6%;
+  left: auto;
+  bottom: auto;
+  width: 58px;
+  height: auto;
+  opacity: 0.35;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+  animation: rxShapeFloat 5s ease-in-out infinite;
+  z-index: 1;
+}
+
+.ed-funfact .ed-funfact__shape-2 {
+  position: absolute;
+  bottom: 8%;
+  left: 4%;
+  right: auto;
+  top: auto;
+  width: 68px;
+  height: auto;
+  opacity: 0.28;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
+  animation: rxShapeSpin 16s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rxShapeFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(4deg);
+  }
+}
+
+@keyframes rxShapeSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.ed-funfact .ed-funfact__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  grid-template-areas: "metrics photo";
+  align-items: center;
+  gap: 48px;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.ed-funfact .ed-funfact__content {
+  grid-area: metrics;
+  align-self: center;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.ed-funfact__heading {
+  margin-bottom: 28px;
+}
+
+.ed-funfact__heading span {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: #0a2e1d;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  box-shadow: 0 4px 12px rgba(10, 46, 29, 0.18);
+}
+
+.ed-funfact__heading h2 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.ed-funfact .ed-funfact__content .row {
+  row-gap: 24px;
+}
+
+.ed-funfact .ed-funfact__counter,
+.ed-funfact .ed-funfact__counter.mg-btm-80 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: auto;
+  margin: 0;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: default;
+}
+
+.ed-funfact .ed-funfact__counter:hover {
+  transform: translateX(8px) !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.ed-funfact .ed-funfact__counter :is(h3, h4) {
+  margin: 0 0 6px;
+  color: #48a92a;
+  font-size: clamp(38px, 3.8vw, 54px);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.ed-funfact .ed-funfact__counter:hover :is(h3, h4) {
+  color: #48a92a;
+}
+
+.ed-funfact .ed-funfact__counter :is(h3, h4) .counter {
+  display: inline-block;
+  color: #111111;
+  font-weight: 900;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.ed-funfact .ed-funfact__counter:hover :is(h3, h4) .counter {
+  transform: scale(1.06);
+}
+
+.ed-funfact .ed-funfact__counter p {
+  margin: 0;
+  color: #1a241e;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  transition: color 0.3s ease;
+}
+
+.ed-funfact .ed-funfact__counter:hover p {
+  color: #000000;
+}
+
+.ed-funfact .ed-funfact__img {
+  position: relative;
+  grid-area: photo;
+  min-width: 0;
+  min-height: 100%;
+  overflow: hidden;
+  border: 6px solid #ffffff;
+  border-radius: 32px 32px 110px 32px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.ed-funfact .ed-funfact__img:hover {
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.24), 0 10px 24px rgba(5, 133, 1, 0.15);
+}
+
+/* Light sweep shine effect across the image on hover */
+.ed-funfact .ed-funfact__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  z-index: 3;
+  pointer-events: none;
+  transition: left 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ed-funfact .ed-funfact__img:hover::before {
+  left: 170%;
+}
+
+.ed-funfact .ed-funfact__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, transparent 55%, rgba(10, 46, 29, 0.28));
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.ed-funfact .ed-funfact__img:hover::after {
+  opacity: 0.8;
+}
+
+.ed-funfact .ed-funfact__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-width: none;
+  border-radius: inherit;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+}
+
+.ed-funfact .ed-funfact__img:hover img {
+  transform: scale(1.07);
+  filter: brightness(1.03) contrast(1.02);
+}
+
+/* Floating interactive impact badge */
+.ed-funfact__floating-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+  animation: rxBadgeFloat 3.8s ease-in-out infinite;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+  pointer-events: auto;
+}
+
+.ed-funfact .ed-funfact__img:hover .ed-funfact__floating-badge {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+}
+
+.ed-funfact__badge-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #058501;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(5, 133, 1, 0.35);
+}
+
+.ed-funfact__badge-text strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 850;
+  color: #111111;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.ed-funfact__badge-text span {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #38423b;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+@keyframes rxBadgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ed-funfact {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .ed-funfact .ed-funfact__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "metrics" "photo";
+    gap: 36px;
+  }
+
+  .ed-funfact .ed-funfact__img img {
+    min-height: 220px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ed-funfact {
+    padding: 44px 0;
+  }
+
+  .ed-funfact__heading {
+    margin-bottom: 20px;
+  }
+
+  .ed-funfact .ed-funfact__content .row {
+    row-gap: 18px;
+  }
+
+  .ed-funfact .ed-funfact__counter :is(h3, h4) {
+    font-size: 34px;
+    margin-bottom: 4px;
+  }
+
+  .ed-funfact .ed-funfact__counter p {
+    font-size: 13.5px;
+  }
+
+  .ed-funfact .ed-funfact__img {
+    border-width: 4px;
+    border-radius: 24px 24px 70px 24px;
+  }
+
+  .ed-funfact .ed-funfact__img img {
+    min-height: 190px;
+    max-height: 240px;
+  }
+}

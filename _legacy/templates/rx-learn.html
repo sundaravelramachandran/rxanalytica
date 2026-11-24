@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Rx Learn | RX Analytica One</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="RX Analytica One: Comprehensive education platform providing Rx Live sessions and webinars, Rx Learn school board curriculum and study materials, Rx Aspire government exam coaching, and Rx Exam student evaluation." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+
+    <!-- CSS (Font, Vendor, Plugins, Style) -->
+    <!-- Plugins CSS -->
+    <link href="plugins/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="plugins/css/animate.min.css" rel="stylesheet" />
+    <link href="plugins/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="plugins/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="plugins/css/maginific-popup.min.css" rel="stylesheet" />
+    <link href="plugins/css/nice-select.min.css" rel="stylesheet" />
+    <link href="plugins/css/icofont.css" rel="stylesheet" />
+    <link href="plugins/css/uicons.css" rel="stylesheet" />
+
+    <!-- Style CSS -->
+    <link href="section-css/style.css" rel="stylesheet" />
+    <link href="section-css/brand-palette.css" rel="stylesheet" />
+
+    <style>
+        /* Prevent horizontal scroll and white flash immediately */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #faf8f3;
+        }
+
+        body.rx-loading {
+            overflow-y: hidden;
+        }
+
+        /* Instant Preloader - No white screen, perfectly centered */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #faf8f3;
+            z-index: 9999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+            overflow: hidden;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        #preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none !important;
+            display: none !important;
+        }
+
+        /* Branded Logo Loader with pulsating green beam */
+        .rx-initial-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            width: 240px;
+            text-align: center;
+        }
+
+        .rx-initial-loader img {
+            width: 200px;
+            height: 66px;
+            object-fit: contain;
+            animation: rxFloat 1.8s ease-in-out infinite;
+        }
+
+        .rx-initial-loader-beam {
+            width: 160px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, #57c501 25%, #74d402 50%, #058501 75%, transparent);
+            box-shadow: 0 0 16px rgba(87, 197, 1, 0.45);
+            transform-origin: center;
+            animation: rxBeam 1.35s ease-in-out infinite;
+        }
+
+        @keyframes rxFloat {
+            0%, 100% { opacity: 0.92; transform: translateY(2px); }
+            50% { opacity: 1; transform: translateY(-3px); }
+        }
+
+        @keyframes rxBeam {
+            0%, 100% { opacity: 0.45; transform: scaleX(0.35); }
+            50% { opacity: 1; transform: scaleX(1); }
+        }
+    </style>
+
+</head>
+
+<body class="rx-loading">
+        <!-- Start Preloader  -->
+    <div id="preloader">
+        <div class="rx-initial-loader">
+            <img src="images/logo.png" alt="Rx Analytica One" width="200" height="66" />
+            <div class="rx-initial-loader-beam"></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+    <!-- Custom Cursor Start -->
+    <div id="ed-mouse">
+        <div id="cursor-ball"></div>
+    </div>
+    <!-- Custom Cursor End -->
+    <!-- Start Mobile Menu Offcanvas -->
+    <div class="modal mobile-menu-modal offcanvas-modal fade" id="offcanvas-modal">
+        <div class="modal-dialog offcanvas-dialog">
+            <div class="modal-content">
+                <div class="modal-header offcanvas-header">
+                    <!-- Mobile Menu Logo -->
+                    <div class="offcanvas-logo">
+                        <a href="index.html"><img alt="#" src="images/logo.png" /></a>
+                    </div>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                        <i class="fi fi-ss-cross"></i>
+                    </button>
+                </div>
+                <div class="mobile-menu-modal-main-body">
+                    <!-- Mobile Menu Navigation -->
+                    <nav class="offcanvas__menu">
+                        <ul class="offcanvas__menu_ul">
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="index.html" data-bs-dismiss="modal">Home</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="about.html">About Us</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-live.html" data-bs-dismiss="modal">Rx Live</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-learn.html" data-bs-dismiss="modal">Rx Learn</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-aspire.html" data-bs-dismiss="modal">Rx Aspire</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-exam.html" data-bs-dismiss="modal">Rx Exam</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="offcanvas__btn mt-4">
+                        <div class="ed-header__auth-buttons ed-topbar__info-buttons">
+                            <button class="register-btn" data-bs-target="#registerModal" data-bs-toggle="modal"
+                                type="button">
+                                Register
+                            </button>
+                            <button class="login-btn" data-bs-target="#loginModal" data-bs-toggle="modal" type="button">
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Mobile Menu Offcanvas -->
+    <!-- Start Header Area -->
+    <header class="ed-header">
+        <div class="container ed-container-expand">
+            <div class="ed-header__inner">
+                <!-- Header Logo -->
+                <div class="ed-header__logo">
+                    <a href="index.html">
+                        <img alt="logo" src="images/logo.png" />
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="ed-header__navigation">
+                    <ul class="ed-header__menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rx-live.html">Rx Live</a>
+                        </li>
+                        <li class="active">
+                            <a href="rx-learn.html">Rx Learn</a>
+                        </li>
+                        <li>
+                            <a href="rx-aspire.html">Rx Aspire</a>
+                        </li>
+                        <li>
+                            <a href="rx-exam.html">Rx Exam</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Right (Register, Login & Mobile Menu Toggle) -->
+                <div class="ed-header__right">
+                    <div class="ed-header__auth-buttons ed-topbar__info-buttons d-none d-lg-flex">
+                        <button class="register-btn" data-bs-target="#registerModal" data-bs-toggle="modal"
+                            type="button">
+                            Register
+                        </button>
+                        <button class="login-btn" data-bs-target="#loginModal" data-bs-toggle="modal" type="button">
+                            Log In
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-offcanvas-toggler" data-bs-target="#offcanvas-modal"
+                        data-bs-toggle="modal" type="button">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main><!-- Start Course Area -->
+                <section class="ed-course section-gap section-bg-1 position-relative" id="rx-learn">
+                    <div class="ed-course__shapes">
+                        <img alt="shape-1" class="ed-course__shape-1 rotate-ani"
+                            src="images/course/course-1/shape-1.svg" />
+                        <img alt="shape-2" class="ed-course__shape-2 updown-ani"
+                            src="images/abstracts/abstract-element-regular.svg" />
+                        <img alt="shape-3" class="ed-course__shape-3 updown-ani"
+                            src="images/course/course-1/shape-3.svg" />
+                    </div>
+                    <div class="container ed-container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8 col-12">
+                                <div class="ed-section-head text-center">
+                                    <span class="ed-section-head__sm-title">RX LEARN CURRICULUM &amp; VAULT</span>
+                                    <h3 class="ed-section-head__title ed-split-text left">
+                                        Structured School Board Lessons &amp; Study Material Sharing
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Single Course Card -->
+                            <div class="col-lg-6 col-xl-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".7s" data-wow-duration="1s">
+                                <div class="ed-course__card">
+                                    <a class="ed-course__img" href="rx-learn.html">
+                                        <img alt="course-img" src="images/course/course-1/3.png" />
+                                    </a>
+                                    <a class="ed-course__tag" href="rx-learn.html">Rx Learn</a>
+                                    <div class="ed-course__body">
+                                        <div class="ed-course__lesson">
+                                            <div class="ed-course__part">
+                                                <i class="fi-rr-book"></i>
+                                                <p>Complete Syllabus</p>
+                                            </div>
+                                            <div class="ed-course__teacher">
+                                                <i class="fi-rr-user"></i>
+                                                <p>Subject Specialist</p>
+                                            </div>
+                                        </div>
+                                        <a class="ed-course__title" href="rx-learn.html">
+                                            <h5>
+                                                Structured School Board Lessons: Mathematics, Science &amp; Social Studies
+                                            </h5>
+                                        </a>
+                                        <div class="ed-course__rattings">
+                                            <ul>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><span>(256 Reviews)</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ed-course__bottom">
+                                            <span class="ed-course__price">Curriculum Track</span>
+                                            <div class="ed-course__students">
+                                                <i class="fi fi-rr-graduation-cap"></i>
+                                                <p>Board Enrolled</p>
+                                            </div>
+                                        </div>
+                                        <!-- Hover Expandable Details Drawer -->
+                                        <div class="ed-course__hover-drawer">
+                                            <div class="ed-course__schedule-grid">
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-calendar-days"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Schedule</span>
+                                                        <strong>Self-Paced + Live</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-clock"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Live Review</span>
+                                                        <strong>Weekly Sat 4:00 PM</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-hourglass"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Duration</span>
+                                                        <strong>180+ Video Lessons</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-book-alt"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Subjects</span>
+                                                        <strong>Math, Science &amp; SST</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ed-course__highlights-wrap">
+                                                <span class="highlights-title"><i class="fi fi-rr-star"></i> Lesson Highlights:</span>
+                                                <ul class="ed-course__highlights-list">
+                                                    <li><i class="fi fi-rr-check"></i> Chapter-by-chapter concept breakdowns with animations</li>
+                                                    <li><i class="fi fi-rr-check"></i> In-lesson conceptual checkpoint quizzes after every topic</li>
+                                                    <li><i class="fi fi-rr-check"></i> Board exam exemplar problems with step-by-step solutions</li>
+                                                </ul>
+                                            </div>
+                                            <div class="ed-course__drawer-footer">
+                                                <a class="ed-btn ed-course__drawer-btn" href="rx-learn.html">
+                                                    <span>Explore Board Lessons</span>
+                                                    <i class="fi fi-rr-arrow-small-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- Single Course Card -->
+                            <div class="col-lg-6 col-xl-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".3s" data-wow-duration="1s">
+                                <div class="ed-course__card">
+                                    <a class="ed-course__img" href="rx-learn.html">
+                                        <img alt="course-img" src="images/course/course-1/4.png" />
+                                    </a>
+                                    <a class="ed-course__tag" href="rx-learn.html">Rx Learn</a>
+                                    <div class="ed-course__body">
+                                        <div class="ed-course__lesson">
+                                            <div class="ed-course__part">
+                                                <i class="fi-rr-book"></i>
+                                                <p>Material Vault</p>
+                                            </div>
+                                            <div class="ed-course__teacher">
+                                                <i class="fi-rr-user"></i>
+                                                <p>Academic Resource Team</p>
+                                            </div>
+                                        </div>
+                                        <a class="ed-course__title" href="rx-learn.html">
+                                            <h5>
+                                                Shared Study Material Vault: Revision Notes, Formulae &amp; Question Banks
+                                            </h5>
+                                        </a>
+                                        <div class="ed-course__rattings">
+                                            <ul>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><i class="icofont-star"></i></li>
+                                                <li><span>(310 Reviews)</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ed-course__bottom">
+                                            <span class="ed-course__price">Shared Materials</span>
+                                            <div class="ed-course__students">
+                                                <i class="fi fi-rr-graduation-cap"></i>
+                                                <p>Downloadable Notes</p>
+                                            </div>
+                                        </div>
+                                        <!-- Hover Expandable Details Drawer -->
+                                        <div class="ed-course__hover-drawer">
+                                            <div class="ed-course__schedule-grid">
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-calendar-days"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Access</span>
+                                                        <strong>Instant Lifetime Sync</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-clock"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Updates</span>
+                                                        <strong>Updated for 2024–25</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-hourglass"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Resources</span>
+                                                        <strong>500+ Verified PDFs</strong>
+                                                    </div>
+                                                </div>
+                                                <div class="schedule-item">
+                                                    <i class="fi fi-rr-document"></i>
+                                                    <div>
+                                                        <span class="schedule-lbl">Vault</span>
+                                                        <strong>Notes &amp; Banks</strong>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ed-course__highlights-wrap">
+                                                <span class="highlights-title"><i class="fi fi-rr-star"></i> Material Highlights:</span>
+                                                <ul class="ed-course__highlights-list">
+                                                    <li><i class="fi fi-rr-check"></i> Printable high-yield revision notes and mind maps</li>
+                                                    <li><i class="fi fi-rr-check"></i> Quick formula cheat sheets for Physics &amp; Mathematics</li>
+                                                    <li><i class="fi fi-rr-check"></i> Chapter-wise question bank with teacher annotations</li>
+                                                </ul>
+                                            </div>
+                                            <div class="ed-course__drawer-footer">
+                                                <a class="ed-btn ed-course__drawer-btn" href="rx-learn.html">
+                                                    <span>Access Material Vault</span>
+                                                    <i class="fi fi-rr-arrow-small-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- End Course Area --></main>
+            <!-- Start Footer Area -->
+            <footer class="ed-footer section-bg-color-1 position-relative">
+                <!-- Footer Top -->
+                <div class="ed-footer__top position-relative">
+                    <div class="ed-footer__shapes">
+                        <img alt="shape-1" class="ed-footer__shape-1" src="images/footer/footer-1/shape-1.svg" />
+                        <img alt="shape-2" class="ed-footer__shape-2 rotate-ani"
+                            src="images/footer/footer-1/shape-2.svg" />
+                        <img alt="shape-3" class="ed-footer__shape-3" src="images/footer/footer-1/shape-3.svg" />
+                    </div>
+                    <div class="container ed-container">
+                        <div class="row g-0">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="ed-footer__widget ed-footer__about">
+                                    <a class="ed-footer__logo" href="index.html">
+                                        <img alt="footer-logo" src="images/logo.png" />
+                                    </a>
+                                    <p class="ed-footer__about-text">
+                                        RX Analytica One is a unified educational ecosystem delivering live interactive sessions &amp; webinars (Rx Live), structured school board teaching &amp; study material sharing (Rx Learn), comprehensive government exam aspirant preparation (Rx Aspire), and in-platform student evaluation with diagnostic analytics (Rx Exam).
+                                    </p>
+                                    <ul class="ed-footer__about-social">
+                                        <li>
+                                            <a href="https://www.facebook.com/" target="_blank"><img
+                                                    alt="icon-dark-facebook"
+                                                    src="images/icons/icon-dark-facebook.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.twitter.com/" target="_blank"><img
+                                                    alt="icon-dark-twitter"
+                                                    src="images/icons/icon-dark-twitter.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.dribbble.com/" target="_blank"><img
+                                                    alt="icon-dark-dribbble"
+                                                    src="images/icons/icon-dark-dribbble.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/" target="_blank"><img
+                                                    alt="icon-dark-instagram"
+                                                    src="images/icons/icon-dark-instagram.svg" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-12">
+                                <div class="ed-footer__widget">
+                                    <h4 class="ed-footer__widget-title">Quick Links</h4>
+                                    <ul class="ed-footer__widget-links">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="rx-live.html">Rx Live</a></li>
+                                        <li class="active">
+                            <a href="rx-learn.html">Rx Learn</a></li>
+                                        <li><a href="rx-aspire.html">Rx Aspire</a></li>
+                                        <li><a href="rx-exam.html">Rx Exam</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="ed-footer__widget contact-widget">
+                                    <h4 class="ed-footer__widget-title">Contact</h4>
+                                    <!-- Single Info  -->
+                                    <div class="ed-footer__contact">
+                                        <div class="ed-footer__contact-icon">
+                                            <img alt="icon-phone-blue" src="images/icons/icon-phone-blue.svg" />
+                                        </div>
+                                        <div class="ed-footer__contact-info">
+                                            <span>24/7 Academic Support</span>
+                                            <a href="tel:+919876543210">+91 98765 43210</a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Info  -->
+                                    <div class="ed-footer__contact">
+                                        <div class="ed-footer__contact-icon">
+                                            <img alt="icon-envelope-blue" src="images/icons/icon-envelope-blue.svg" />
+                                        </div>
+                                        <div class="ed-footer__contact-info">
+                                            <span>Send Message</span>
+                                            <a href="mailto:support@rxanalytica.com">support@rxanalytica.com</a>
+                                        </div>
+                                    </div>
+                                    <!-- Single Info  -->
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="ed-footer__widget newsletter-widget">
+                                    <h4 class="ed-footer__widget-title">Subscribe</h4>
+                                    <div class="ed-footer__newsletter">
+                                        <p class="ed-footer__about-text">
+                                            Subscribe to our newsletter for live webinar alerts, new board study materials, and government exam updates.
+                                        </p>
+                                        <form action="#" class="ed-footer__newsletter-form" method="post">
+                                            <input name="email" placeholder="Enter email" required="" type="email" />
+                                            <button class="ed-btn" type="submit">Subscribe Now<i
+                                                    class="fi fi-rr-arrow-small-right"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+                <div class="ed-footer__bottom">
+                    <div class="container ed-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="ed-footer__copyright-text">
+                                    Copyright &copy; 2026 RX Analytica One. All Rights Reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer Area  -->
+        </div>
+    </div>
+    <!-- Start Login Modal -->
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade ed-auth__modal" id="loginModal"
+        tabindex="-1">
+        <div class="modal-dialog">
+            <div class="ed-auth__modal-content modal-content">
+                <button aria-label="Close" class="ed-auth__modal-close" data-bs-dismiss="modal" type="button">
+                    <i class="fi-rr-cross"></i>
+                </button>
+                <!-- Auth Head  -->
+                <div class="ed-auth__modal-head">
+                    <a class="ed-auth__modal-logo" href="index.html">
+                        <img alt="logo" src="images/logo.png" />
+                    </a>
+                    <h3 class="ed-auth__modal-title">Sign In to RX Analytica One</h3>
+                    <p class="ed-auth__modal-text">
+                        Don't have an account?
+                        <button data-bs-target="#registerModal" data-bs-toggle="modal" type="button">
+                            Sign Up
+                        </button>
+                    </p>
+                </div>
+                <!-- Auth Body  -->
+                <div class="ed-auth__modal-body">
+                    <form action="#" class="ed-auth__modal-form" method="post">
+                        <div class="form-group">
+                            <input name="name" placeholder="Enter username or email" required="" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <input name="password" placeholder="Enter password" required="" type="password" />
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <input class="form-check-input" id="flexCheckDefault" type="checkbox" value="" />
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="ed-auth__form-btn">
+                            <button class="ed-btn" type="submit">Sign In<i
+                                    class="fi fi-rr-arrow-small-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Auth Footer  -->
+                <div class="ed-auth__modal-footer">
+                    <div class="ed-auth__modal-third-party">
+                        <p>Or Sign In with</p>
+                        <ul class="ed-auth__modal-third-party-list">
+                            <li>
+                                <a class="google-login" href="https://www.google.com/"><img alt="icon-color-google"
+                                        src="images/icons/icon-color-google.svg" /></a>
+                            </li>
+                            <li>
+                                <a class="facebook-login" href="https://facebook.com/"><img alt="icon-color-facebook"
+                                        src="images/icons/icon-color-facebook.svg" /></a>
+                            </li>
+                            <li>
+                                <a class="linkedin-login" href="https://www.linkedin.com/"><img
+                                        alt="icon-color-linkedin" src="images/icons/icon-color-linkedin.svg" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+    <!-- Start Register Modal -->
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade ed-auth__modal" id="registerModal"
+        tabindex="-1">
+        <div class="modal-dialog">
+            <div class="ed-auth__modal-content modal-content">
+                <button aria-label="Close" class="ed-auth__modal-close" data-bs-dismiss="modal" type="button">
+                    <i class="fi-rr-cross"></i>
+                </button>
+                <!-- Auth Head  -->
+                <div class="ed-auth__modal-head">
+                    <a class="ed-auth__modal-logo" href="index.html">
+                        <img alt="logo" src="images/logo.png" />
+                    </a>
+                    <h3 class="ed-auth__modal-title">Sign Up for RX Analytica One</h3>
+                    <p class="ed-auth__modal-text">
+                        Already have an account?
+                        <button data-bs-target="#loginModal" data-bs-toggle="modal" type="button">
+                            Sign In
+                        </button>
+                    </p>
+                </div>
+                <!-- Auth Body  -->
+                <div class="ed-auth__modal-body">
+                    <form action="#" class="ed-auth__modal-form" method="post">
+                        <div class="form-group">
+                            <input name="name" placeholder="Enter full name" required="" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <input name="user name" placeholder="Enter username" required="" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <input name="email" placeholder="Enter email" required="" type="email" />
+                        </div>
+                        <div class="form-group">
+                            <input name="password" placeholder="Enter password" required="" type="password" />
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="flexCheckDefault2">
+                                <input class="form-check-input" id="flexCheckDefault2" type="checkbox" value="" />
+                                I agree with the <strong>Terms &amp; Privacy Policy</strong>
+                            </label>
+                        </div>
+                        <div class="ed-auth__form-btn">
+                            <button class="ed-btn" type="submit">Create Student Account<i
+                                    class="fi fi-rr-arrow-small-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Auth Footer  -->
+                <div class="ed-auth__modal-footer">
+                    <div class="ed-auth__modal-third-party">
+                        <p>Or Sign Up with</p>
+                        <ul class="ed-auth__modal-third-party-list">
+                            <li>
+                                <a class="google-login" href="https://www.google.com/"><img alt="icon-color-google"
+                                        src="images/icons/icon-color-google.svg" /></a>
+                            </li>
+                            <li>
+                                <a class="facebook-login" href="https://facebook.com/"><img alt="icon-color-facebook"
+                                        src="images/icons/icon-color-facebook.svg" /></a>
+                            </li>
+                            <li>
+                                <a class="linkedin-login" href="https://www.linkedin.com/"><img
+                                        alt="icon-color-linkedin" src="images/icons/icon-color-linkedin.svg" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Register Modal -->
+    <!-- Start Sidebar Cart -->
+    <div aria-labelledby="offcanvasRightLabel" class="offcanvas offcanvas-end ed-sidebar ed-sidebar-cart"
+        id="edSidebarCart" tabindex="-1">
+        <div class="ed-sidebar-header">
+            <h3 class="ed-sidebar-header-title">Enrolled Programs</h3>
+            <button aria-label="Close" class="text-reset" data-bs-dismiss="offcanvas" type="button">
+                <i class="fi fi-rr-cross"></i>
+            </button>
+        </div>
+        <div class="ed-sidebar-body">
+            <!-- Single Cart Item  -->
+            <div class="ed-sidebar-cart-item">
+                <div class="ed-sidebar-cart-main">
+                    <div class="ed-sidebar-cart-img">
+                        <img alt="cart-1" src="images/product/cart-1.png" />
+                    </div>
+                    <div class="ed-sidebar-cart-info">
+                        <span>1 x <strong>Included</strong></span>
+                        <a href="rx-learn.html">Class 12 Board Notes &amp; Revision Vault</a>
+                    </div>
+                </div>
+                <div class="ed-sidebar-cart-remove">
+                    <button type="button"><i class="fi-rr-cross"></i></button>
+                </div>
+            </div>
+            <!-- Single Cart Item  -->
+            <div class="ed-sidebar-cart-item">
+                <div class="ed-sidebar-cart-main">
+                    <div class="ed-sidebar-cart-img">
+                        <img alt="cart-2" src="images/product/cart-2.png" />
+                    </div>
+                    <div class="ed-sidebar-cart-info">
+                        <span>1 x <strong>Included</strong></span>
+                        <a href="rx-aspire.html">Govt. Exam General Studies Master Track</a>
+                    </div>
+                </div>
+                <div class="ed-sidebar-cart-remove">
+                    <button type="button"><i class="fi-rr-cross"></i></button>
+                </div>
+            </div>
+            <!-- Single Cart Item  -->
+            <div class="ed-sidebar-cart-item">
+                <div class="ed-sidebar-cart-main">
+                    <div class="ed-sidebar-cart-img">
+                        <img alt="cart-3" src="images/product/cart-3.png" />
+                    </div>
+                    <div class="ed-sidebar-cart-info">
+                        <span>1 x <strong>Included</strong></span>
+                        <a href="rx-exam.html">Rx Exam All-India Diagnostic Mock Pass</a>
+                    </div>
+                </div>
+                <div class="ed-sidebar-cart-remove">
+                    <button type="button"><i class="fi-rr-cross"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="ed-sidebar-footer">
+            <div class="ed-sidebar-cart-subtotal">
+                <p>Status:<span> Active Enrolled</span></p>
+                <a class="ed-sidebar-cart-btn" href="rx-exam.html">Start Learning</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar Cart -->
+    <!-- Start Sidebar  -->
+    <div aria-labelledby="offcanvasRightLabel" class="offcanvas offcanvas-end ed-sidebar" id="edSidebar" tabindex="-1">
+        <div class="ed-sidebar-header">
+            <a class="ed-sidebar-logo" href="index.html">
+                <img alt="logo" src="images/logo.png" />
+            </a>
+            <button aria-label="Close" class="text-reset" data-bs-dismiss="offcanvas" type="button">
+                <i class="fi fi-rr-cross"></i>
+            </button>
+        </div>
+        <div class="ed-sidebar-body m-0">
+            <!-- Single Widget  -->
+            <div class="ed-sidebar-widget">
+                <h3 class="ed-sidebar-widget-title">Contact Us:</h3>
+                <!-- Sigle Info  -->
+                <div class="ed-contact__info-item">
+                    <div class="ed-contact__info-icon">
+                        <img alt="icon-phone-blue" src="images/icons/icon-phone-blue.svg" />
+                    </div>
+                    <div class="ed-contact__info-content">
+                        <span>24/7 Academic Support</span>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </div>
+                </div>
+                <!-- Sigle Info  -->
+                <div class="ed-contact__info-item">
+                    <div class="ed-contact__info-icon">
+                        <img alt="icon-envelope-blue" src="images/icons/icon-envelope-blue.svg" />
+                    </div>
+                    <div class="ed-contact__info-content">
+                        <span>Send Message</span>
+                        <a href="mailto:support@rxanalytica.com">support@rxanalytica.com</a>
+                    </div>
+                </div>
+                <!-- Sigle Info  -->
+                <div class="ed-contact__info-item">
+                    <div class="ed-contact__info-icon">
+                        <img alt="icon-location-blue" src="images/icons/icon-location-blue.svg" />
+                    </div>
+                    <div class="ed-contact__info-content">
+                        <span>Our Location</span>
+                        <a href="#">RX Analytica Hub, Knowledge City</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Widget  -->
+            <div class="ed-sidebar-widget">
+                <h3 class="ed-sidebar-widget-title">Follow Us:</h3>
+                <ul class="ed-sidebar-social">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank"><img alt="icon-dark-facebook"
+                                src="images/icons/icon-dark-facebook.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com/" target="_blank"><img alt="icon-dark-twitter"
+                                src="images/icons/icon-dark-twitter.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.dribbble.com/" target="_blank"><img alt="icon-dark-dribbble"
+                                src="images/icons/icon-dark-dribbble.svg" /></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><img alt="icon-dark-instagram"
+                                src="images/icons/icon-dark-instagram.svg" /></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Single Widget  -->
+            <div class="ed-sidebar-widget">
+                <h3 class="ed-sidebar-widget-title">Subscribe Now:</h3>
+                <form action="#" class="ed-sidebar-subscribe" method="post">
+                    <input name="email-address" placeholder="Enter email" required="" type="email" />
+                    <button class="ed-btn" type="submit">Subscribe<i class="fi fi-rr-arrow-small-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Sidebar  -->
+    <!-- Start Back To Top  -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" height="100%" viewbox="-1 -1 102 102" width="100%">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+    <!-- End Back To Top -->
+
+    <!-- JS (Vendor, Plugins, Main) -->
+    <script src="plugins/js/jquery.min.js"></script>
+    <script src="plugins/js/jquery-migrate.js"></script>
+    <script src="plugins/js/bootstrap.min.js"></script>
+    <script src="plugins/js/gsap/gsap.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-smoother.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-trigger.js"></script>
+    <script src="plugins/js/gsap/gsap-split-text.js"></script>
+    <script src="plugins/js/wow.min.js"></script>
+    <script src="plugins/js/owl.carousel.min.js"></script>
+    <script src="plugins/js/swiper-bundle.min.js"></script>
+    <script src="plugins/js/magnific-popup.min.js"></script>
+    <script src="plugins/js/jquery.counterup.min.js"></script>
+    <script src="plugins/js/waypoints.min.js"></script>
+    <script src="plugins/js/nice-select.min.js"></script>
+    <script src="plugins/js/backToTop.js"></script>
+    <script src="plugins/js/active.js"></script>
+
+    <!-- RX Hero Card Video Popup -->
+    <div class="rx-video-modal" id="rxVideoModal" aria-hidden="true">
+        <div class="rx-video-modal__backdrop" data-rx-video-close></div>
+        <section class="rx-video-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="rxVideoModalTitle">
+            <button class="rx-video-modal__close" type="button" aria-label="Close video" data-rx-video-close>&times;</button>
+            <h2 class="rx-video-modal__title" id="rxVideoModalTitle">Program video</h2>
+            <div class="rx-video-modal__stage">
+                <video class="rx-video-modal__player" controls playsinline hidden></video>
+                <iframe class="rx-video-modal__embed" title="Program video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+                <p class="rx-video-modal__empty">Video coming soon. This video slot is ready for your clip.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- RX Hero Card Video Popup Interaction -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var cardsDeck = document.getElementById("rxCardsDeck");
+            var modal = document.getElementById("rxVideoModal");
+            if (!cardsDeck || !modal) return;
+
+            var title = modal.querySelector("#rxVideoModalTitle");
+            var video = modal.querySelector(".rx-video-modal__player");
+            var embed = modal.querySelector(".rx-video-modal__embed");
+            var empty = modal.querySelector(".rx-video-modal__empty");
+            var lastFocused = null;
+
+            function getEmbedUrl(url) {
+                try {
+                    var parsed = new URL(url, window.location.href);
+                    if (parsed.hostname.includes("youtu.be")) return "https://www.youtube-nocookie.com/embed/" + parsed.pathname.slice(1) + "?autoplay=1";
+                    if (parsed.hostname.includes("youtube.com")) {
+                        var id = parsed.searchParams.get("v");
+                        if (id) return "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1";
+                        if (parsed.pathname.startsWith("/embed/")) return url;
+                    }
+                    if (parsed.hostname.includes("vimeo.com")) return "https://player.vimeo.com/video/" + parsed.pathname.split("/").filter(Boolean).pop() + "?autoplay=1";
+                } catch (error) { }
+                return "";
+            }
+
+            function openVideo(card) {
+                var heading = card.querySelector(".rx-card-title");
+                var source = card.getAttribute("data-video-src");
+                lastFocused = card;
+                title.textContent = heading ? heading.textContent.trim() : "Program video";
+                video.pause();
+                video.removeAttribute("src");
+                video.hidden = true;
+                embed.hidden = true;
+                embed.removeAttribute("src");
+                empty.hidden = false;
+
+                if (source) {
+                    var embedUrl = getEmbedUrl(source);
+                    if (embedUrl) {
+                        embed.src = embedUrl;
+                        embed.hidden = false;
+                        empty.hidden = true;
+                    } else {
+                        video.src = source;
+                        video.hidden = false;
+                        empty.hidden = true;
+                    }
+                }
+
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+                document.body.classList.add("rx-video-modal-open");
+                modal.querySelector(".rx-video-modal__close").focus();
+            }
+
+            function closeVideo() {
+                if (!modal.classList.contains("is-open")) return;
+                video.pause();
+                video.removeAttribute("src");
+                video.load();
+                embed.removeAttribute("src");
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                document.body.classList.remove("rx-video-modal-open");
+                if (lastFocused) lastFocused.focus();
+            }
+
+            cardsDeck.querySelectorAll(".rx-card-item").forEach(function (card) {
+                card.addEventListener("click", function (event) {
+                    if (event.target.closest("a")) return;
+                    event.preventDefault();
+                    openVideo(card);
+                });
+                card.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openVideo(card);
+                    }
+                });
+            });
+
+            modal.querySelectorAll("[data-rx-video-close]").forEach(function (element) {
+                element.addEventListener("click", closeVideo);
+            });
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") closeVideo();
+            });
+        });
+    </script>
+    <script>
+        /* RX Analytica One - Smooth Navbar Section Navigation & Scrollspy */
+        document.addEventListener("DOMContentLoaded", function () {
+            var sectionIds = ["home", "rx-live", "rx-learn", "rx-aspire", "rx-exam"];
+            var desktopNavLinks = document.querySelectorAll(".ed-header__menu li a[href^='#']");
+            var mobileNavLinks = document.querySelectorAll(".offcanvas__menu_ul li a[href^='#']");
+            var allAnchorLinks = document.querySelectorAll("a[href^='#']");
+
+            function scrollToSection(targetId) {
+                var target = document.getElementById(targetId);
+                if (!target) return;
+
+                // For Home, scroll cleanly to the very top (0px)
+                if (targetId === "home") {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                    return;
+                }
+
+                if (window.ScrollSmoother && typeof ScrollSmoother.get === "function" && ScrollSmoother.get()) {
+                    ScrollSmoother.get().scrollTo(target, true, "top 85px");
+                } else {
+                    var header = document.querySelector(".ed-header");
+                    var headerOffset = header ? header.offsetHeight : 80;
+                    var bodyRect = document.body.getBoundingClientRect().top;
+                    var elementRect = target.getBoundingClientRect().top;
+                    var elementPosition = elementRect - bodyRect;
+                    var offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            }
+
+            // Smooth Scroll on Anchor Clicks & Mobile Menu Dismissal
+            allAnchorLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    var href = this.getAttribute("href");
+                    if (!href || href === "#" || !href.startsWith("#")) return;
+                    var targetId = href.substring(1);
+                    var target = document.getElementById(targetId);
+                    if (target) {
+                        e.preventDefault();
+
+                        // Auto-close mobile offcanvas modal if open
+                        var offcanvasEl = document.getElementById("offcanvas-modal");
+                        if (offcanvasEl && (offcanvasEl.classList.contains("show") || getComputedStyle(offcanvasEl).display !== "none")) {
+                            if (window.bootstrap && bootstrap.Modal) {
+                                var bsModal = bootstrap.Modal.getInstance(offcanvasEl);
+                                if (bsModal) {
+                                    bsModal.hide();
+                                } else {
+                                    var closeBtn = offcanvasEl.querySelector(".btn-close, [data-bs-dismiss='modal']");
+                                    if (closeBtn) closeBtn.click();
+                                }
+                            } else {
+                                var closeBtn = offcanvasEl.querySelector(".btn-close, [data-bs-dismiss='modal']");
+                                if (closeBtn) closeBtn.click();
+                            }
+                        }
+
+                        scrollToSection(targetId);
+                        if (history.pushState) {
+                            history.pushState(null, null, href);
+                        }
+                        updateActiveNav(targetId);
+                    }
+                });
+            });
+
+            // Auto-close mobile offcanvas drawer when opening Auth modals from inner drawer
+            var offcanvasAuthBtns = document.querySelectorAll("#offcanvas-modal .offcanvas__btn button");
+            offcanvasAuthBtns.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var offcanvasEl = document.getElementById("offcanvas-modal");
+                    if (offcanvasEl) {
+                        if (window.bootstrap && bootstrap.Modal) {
+                            var bsModal = bootstrap.Modal.getInstance(offcanvasEl);
+                            if (bsModal) {
+                                bsModal.hide();
+                            }
+                        }
+                    }
+                });
+            });
+
+            function updateActiveNav(activeId) {
+                // Update Desktop Navigation
+                desktopNavLinks.forEach(function (link) {
+                    var parentLi = link.closest("li");
+                    if (!parentLi) return;
+                    if (link.getAttribute("href") === "#" + activeId) {
+                        parentLi.classList.add("active");
+                    } else {
+                        parentLi.classList.remove("active");
+                    }
+                });
+
+                // Update Mobile Navigation
+                mobileNavLinks.forEach(function (link) {
+                    if (link.getAttribute("href") === "#" + activeId) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+            }
+
+            // Scrollspy on window scroll
+            var ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function () {
+                        var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                        if (scrollPos < 100) {
+                            updateActiveNav("home");
+                            ticking = false;
+                            return;
+                        }
+
+                        var currentActive = sectionIds[0];
+
+                        for (var i = 0; i < sectionIds.length; i++) {
+                            var sec = document.getElementById(sectionIds[i]);
+                            if (sec) {
+                                var rect = sec.getBoundingClientRect();
+                                // If top of section is near or above header offset
+                                if (rect.top <= 140) {
+                                    currentActive = sectionIds[i];
+                                }
+                            }
+                        }
+
+                        updateActiveNav(currentActive);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener("scroll", onScroll, { passive: true });
+
+            // Partners & Investors Seamless Infinite Auto-Scroll & Controls
+            var investSlider = document.getElementById("rxInvestorsSlider");
+            var btnLeft = document.getElementById("rxInvestScrollLeft");
+            var btnRight = document.getElementById("rxInvestScrollRight");
+
+            if (investSlider) {
+                // Clone cards once to create a seamless infinite marquee loop
+                var originalCards = Array.from(investSlider.children);
+                originalCards.forEach(function (card) {
+                    var clone = card.cloneNode(true);
+                    clone.setAttribute("aria-hidden", "true");
+                    investSlider.appendChild(clone);
+                });
+
+                var isPaused = false;
+                var autoScrollSpeed = 0.8; // Smooth 60fps auto-scroll speed (pixels per frame)
+                var animationFrameId = null;
+
+                function autoScrollStep() {
+                    if (!isPaused) {
+                        investSlider.scrollLeft += autoScrollSpeed;
+                        var halfScroll = investSlider.scrollWidth / 2;
+                        if (investSlider.scrollLeft >= halfScroll) {
+                            investSlider.scrollLeft -= halfScroll;
+                        } else if (investSlider.scrollLeft <= 0) {
+                            investSlider.scrollLeft += halfScroll;
+                        }
+                    }
+                    animationFrameId = requestAnimationFrame(autoScrollStep);
+                }
+
+                animationFrameId = requestAnimationFrame(autoScrollStep);
+
+                // Pause on hover or touch so users can comfortably inspect cards & click links
+                investSlider.addEventListener("mouseenter", function () {
+                    isPaused = true;
+                });
+                investSlider.addEventListener("mouseleave", function () {
+                    isPaused = false;
+                });
+                investSlider.addEventListener("touchstart", function () {
+                    isPaused = true;
+                }, { passive: true });
+                investSlider.addEventListener("touchend", function () {
+                    setTimeout(function () { isPaused = false; }, 1200);
+                }, { passive: true });
+
+                // Manual arrow navigation controls
+                if (btnLeft && btnRight) {
+                    btnLeft.addEventListener("click", function () {
+                        isPaused = true;
+                        investSlider.scrollBy({ left: -310, behavior: "smooth" });
+                        setTimeout(function () { isPaused = false; }, 2000);
+                    });
+                    btnRight.addEventListener("click", function () {
+                        isPaused = true;
+                        investSlider.scrollBy({ left: 310, behavior: "smooth" });
+                        setTimeout(function () { isPaused = false; }, 2000);
+                    });
+                }
+            }
+
+            // Mobile & Touch tap-to-expand for Course Cards
+            var courseCards = document.querySelectorAll(".ed-course__card");
+            courseCards.forEach(function (card) {
+                card.addEventListener("click", function (e) {
+                    if (window.innerWidth <= 991) {
+                        if (e.target.closest(".ed-course__drawer-btn")) {
+                            return; // Allow CTA button to navigate
+                        }
+                        e.preventDefault(); // Prevent thumbnail/tag/title anchor jump
+                        var isExpanded = this.classList.contains("active");
+                        // Close any other open card for clean accordion feel on mobile
+                        courseCards.forEach(function (c) { c.classList.remove("active"); });
+                        if (!isExpanded) {
+                            this.classList.add("active");
+                        }
+                    }
+                });
+            });
+
+            // Auto-close mobile offcanvas drawer when opening Auth modals from inner drawer
+            var offcanvasAuthBtns = document.querySelectorAll("#offcanvas-modal .offcanvas__btn button");
+            offcanvasAuthBtns.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var offcanvasEl = document.getElementById("offcanvas-modal");
+                    if (offcanvasEl) {
+                        if (window.bootstrap && bootstrap.Modal) {
+                            var bsModal = bootstrap.Modal.getInstance(offcanvasEl);
+                            if (bsModal) {
+                                bsModal.hide();
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

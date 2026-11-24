@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>About Us - Rx Analytica One | Transforming Education & Academic Ecosystem</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="Discover RX Analytica One: simple, practical learning, expert-led webinars, exam preparation, performance insights, and scholarship opportunities." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+
+    <!-- CSS (Font, Vendor, Plugins, Style) -->
+    <link href="plugins/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="plugins/css/animate.min.css" rel="stylesheet" />
+    <link href="plugins/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="plugins/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="plugins/css/maginific-popup.min.css" rel="stylesheet" />
+    <link href="plugins/css/nice-select.min.css" rel="stylesheet" />
+    <link href="plugins/css/icofont.css" rel="stylesheet" />
+    <link href="plugins/css/uicons.css" rel="stylesheet" />
+
+    <!-- Style CSS -->
+    <link href="section-css/style.css" rel="stylesheet" />
+    <link href="section-css/about-page.css" rel="stylesheet" />
+    <link href="section-css/brand-palette.css" rel="stylesheet" />
+
+    <style>
+        /* Prevent horizontal scroll and white flash immediately */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #faf8f3;
+        }
+
+        body.rx-loading {
+            overflow-y: hidden;
+        }
+
+        /* Instant Preloader - No white screen, perfectly centered */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #faf8f3;
+            z-index: 9999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+            overflow: hidden;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        #preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none !important;
+            display: none !important;
+        }
+
+        /* Branded Logo Loader with pulsating green beam */
+        .rx-initial-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            width: 240px;
+            text-align: center;
+        }
+
+        .rx-initial-loader img {
+            width: 200px;
+            height: 66px;
+            object-fit: contain;
+            animation: rxFloat 1.8s ease-in-out infinite;
+        }
+
+        .rx-initial-loader-beam {
+            width: 160px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, transparent, #57c501 25%, #74d402 50%, #058501 75%, transparent);
+            box-shadow: 0 0 16px rgba(87, 197, 1, 0.45);
+            transform-origin: center;
+            animation: rxBeam 1.35s ease-in-out infinite;
+        }
+
+        @keyframes rxFloat {
+            0%, 100% { opacity: 0.92; transform: translateY(2px); }
+            50% { opacity: 1; transform: translateY(-3px); }
+        }
+
+        @keyframes rxBeam {
+            0%, 100% { opacity: 0.45; transform: scaleX(0.35); }
+            50% { opacity: 1; transform: scaleX(1); }
+        }
+    </style>
+
+</head>
+
+<body class="rx-loading">
+        <!-- Start Preloader  -->
+    <div id="preloader">
+        <div class="rx-initial-loader">
+            <img src="images/logo.png" alt="Rx Analytica One" width="200" height="66" />
+            <div class="rx-initial-loader-beam"></div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- Custom Cursor Start -->
+    <div id="ed-mouse">
+        <div id="cursor-ball"></div>
+    </div>
+    <!-- Custom Cursor End -->
+
+    <!-- Start Mobile Menu Offcanvas -->
+    <div class="modal mobile-menu-modal offcanvas-modal fade" id="offcanvas-modal">
+        <div class="modal-dialog offcanvas-dialog">
+            <div class="modal-content">
+                <div class="modal-header offcanvas-header">
+                    <!-- Mobile Menu Logo -->
+                    <div class="offcanvas-logo">
+                        <a href="index.html"><img alt="RX Analytica One" src="images/logo.png" /></a>
+                    </div>
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button">
+                        <i class="fi fi-ss-cross"></i>
+                    </button>
+                </div>
+                <div class="mobile-menu-modal-main-body">
+                    <!-- Mobile Menu Navigation -->
+                    <nav class="offcanvas__menu">
+                        <ul class="offcanvas__menu_ul">
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="index.html">Home</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item active" href="about.html">About Us</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-live.html">Rx Live</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-learn.html">Rx Learn</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-aspire.html">Rx Aspire</a>
+                            </li>
+                            <li class="offcanvas__menu_li">
+                                <a class="offcanvas__menu_item" href="rx-exam.html">Rx Exam</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="offcanvas__btn mt-4">
+                        <div class="ed-header__auth-buttons ed-topbar__info-buttons">
+                            <button class="register-btn" data-bs-target="#registerModal" data-bs-toggle="modal" type="button">
+                                Register
+                            </button>
+                            <button class="login-btn" data-bs-target="#loginModal" data-bs-toggle="modal" type="button">
+                                Log In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Mobile Menu Offcanvas -->
+
+    <!-- Start Header Area -->
+    <header class="ed-header">
+        <div class="container ed-container-expand">
+            <div class="ed-header__inner">
+                <!-- Header Logo -->
+                <div class="ed-header__logo">
+                    <a href="index.html">
+                        <img alt="RX Analytica One Logo" src="images/logo.png" />
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="ed-header__navigation">
+                    <ul class="ed-header__menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="rx-live.html">Rx Live</a>
+                        </li>
+                        <li>
+                            <a href="rx-learn.html">Rx Learn</a>
+                        </li>
+                        <li>
+                            <a href="rx-aspire.html">Rx Aspire</a>
+                        </li>
+                        <li>
+                            <a href="rx-exam.html">Rx Exam</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Header Right (Register, Login & Mobile Menu Toggle) -->
+                <div class="ed-header__right">
+                    <div class="ed-header__auth-buttons ed-topbar__info-buttons d-none d-lg-flex">
+                        <button class="register-btn" data-bs-target="#registerModal" data-bs-toggle="modal" type="button">
+                            Register
+                        </button>
+                        <button class="login-btn" data-bs-target="#loginModal" data-bs-toggle="modal" type="button">
+                            Log In
+                        </button>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-offcanvas-toggler" data-bs-target="#offcanvas-modal" data-bs-toggle="modal" type="button">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <main>
+                <!-- About Hero -->
+                <section class="rx-about-banner rx-about-banner--bright">
+                    <div class="container ed-container position-relative">
+                        <div class="rx-about-hero__content">
+                            <span class="rx-about-eyebrow">WHO WE ARE</span>
+                            <h1 class="rx-banner-title">Learning Simplified.<br /><span>Opportunities Expanded.</span></h1>
+                            <p class="rx-banner-subtitle">Learn concepts with clarity, build practical skills, prepare with confidence, and measure your progress — all in one learning ecosystem.</p>
+                            <a class="rx-about-primary-link" href="#learning-ecosystem">Explore Our Learning Ecosystem <span aria-hidden="true">→</span></a>
+                        </div>
+                    </div>
+                </section>
+                <!-- End About Us Page Banner -->
+
+                <!-- About, Vision, Mission & Goals -->
+                <section class="rx-purpose rx-about-mission" id="our-purpose">
+                    <div class="container ed-container">
+                        <div class="rx-about-goals">
+                            <div class="rx-about-section-heading rx-about-section-heading--left">
+                                <span class="rx-about-eyebrow">OUR GOALS</span>
+                                <h2>Five ways we help learners <span class="rx-about-green-heading">move forward.</span></h2>
+                            </div>
+                            <div class="rx-about-goals__grid">
+                                <article class="rx-about-goal"><span>01</span><h3>Simplify Learning</h3><p>Make school concepts easy to understand through real-life examples.</p></article>
+                                <article class="rx-about-goal"><span>02</span><h3>Build Skills</h3><p>Develop practical knowledge in AI, technologies, business strategies, and professional skills.</p></article>
+                                <article class="rx-about-goal"><span>03</span><h3>Simplify Exam Preparation</h3><p>Support government, entrance, and competitive exams through quick revisions.</p></article>
+                                <article class="rx-about-goal"><span>04</span><h3>Improve Exam Success</h3><p>Provide mock tests, practice assessments, and scholarship exams for school and college students and exam aspirants.</p></article>
+                                <article class="rx-about-goal"><span>05</span><h3>Empower Futures</h3><p>Build confidence, improve knowledge, and support academic and career growth.</p></article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Learning Ecosystem -->
+                <section class="rx-ecosystem" id="learning-ecosystem">
+                    <div class="container ed-container">
+                        <div class="rx-about-section-heading"><span class="rx-about-eyebrow">OUR LEARNING ECOSYSTEM</span><h2>One ecosystem. <span class="rx-about-green-heading">Four ways to grow.</span></h2></div>
+                        <div class="rx-ecosystem__grid">
+                            <article class="rx-ecosystem-card rx-ecosystem-card--live"><div class="rx-ecosystem-card__art" aria-hidden="true"><img src="images/hero/3d-icon-live.svg" alt="" loading="lazy" /></div><h3>RX <em>Live</em></h3><h4>Learn from experts, in real time.</h4><p>Live webinars, expert sessions and practical knowledge for academic, industry and career growth.</p><a href="rx-live.html">Know more <span aria-hidden="true">→</span></a><span class="rx-ecosystem-card__glare" aria-hidden="true"></span></article>
+                            <article class="rx-ecosystem-card rx-ecosystem-card--learn"><div class="rx-ecosystem-card__art" aria-hidden="true"><img src="images/hero/3d-icon-learn.svg" alt="" loading="lazy" /></div><h3>RX <em>Learn</em></h3><h4>Understand more. Revise faster.</h4><p>Simplified concepts, visual explanations, real-life applications and quick revision.</p><a href="rx-learn.html">Know more <span aria-hidden="true">→</span></a><span class="rx-ecosystem-card__glare" aria-hidden="true"></span></article>
+                            <article class="rx-ecosystem-card rx-ecosystem-card--aspire"><div class="rx-ecosystem-card__art" aria-hidden="true"><img src="images/hero/3d-icon-aspire.svg" alt="" loading="lazy" /></div><h3>RX <em>Aspire</em></h3><h4>Prepare with purpose.</h4><p>Structured learning and focused preparation for competitive and academic examinations.</p><a href="rx-aspire.html">Know more <span aria-hidden="true">→</span></a><span class="rx-ecosystem-card__glare" aria-hidden="true"></span></article>
+                            <article class="rx-ecosystem-card rx-ecosystem-card--exam"><div class="rx-ecosystem-card__art" aria-hidden="true"><img src="images/hero/3d-icon-exams.svg" alt="" loading="lazy" /></div><h3>RX <em>Exam</em></h3><h4>Assess. Improve. Achieve.</h4><p>Mock tests, performance insights, gap analysis and scholarship opportunities.</p><a href="rx-exam.html">Know more <span aria-hidden="true">→</span></a><span class="rx-ecosystem-card__glare" aria-hidden="true"></span></article>
+                        </div>
+                    </div>
+                </section>
+                <!-- Partners & Investors -->
+                <section class="rx-partners" id="partners-investors"><div class="container ed-container"><div class="rx-about-section-heading"><span class="rx-about-eyebrow">PARTNERS &amp; INVESTORS</span><h2 class="rx-about-green-heading">Working together to expand learning opportunities.</h2><p>Meet the people represented in our partner and investor community. Flip a card to learn about the shared purpose behind this ecosystem.</p></div><div class="rx-partners__grid">
+                                                <article class="rx-partner-flip" tabindex="0" role="button" aria-pressed="false" aria-label="View Haridas's profile">
+                            <div class="rx-partner-flip__inner">
+                                <div class="rx-partner-flip__face rx-partner-flip__front">
+                                    <img src="images/partners%20&%20investors/9be54072-9142-4525-bea6-cee2f2c1958d_large.png" alt="Haridas, AI consultant" loading="lazy" />
+                                    <span class="rx-partner-flip__hint">Tap to learn more <b aria-hidden="true">&#8599;</b></span>
+                                </div>
+                                <div class="rx-partner-flip__face rx-partner-flip__back">
+
+                                    <span class="rx-partner-flip__tag">AI Consultant</span>
+                                    <h3>AI &amp; Technology</h3>
+                                    <p>A technology professional with a focus on AI and practical applications. Brings a perspective on making emerging technologies easier to understand and apply.</p>
+                                </div>
+                            </div>
+                            <div class="rx-partner-profile"><h3>Haridas</h3><p>AI Consultant</p><span>AI &amp; Technology</span></div>
+                        </article>
+                                                <article class="rx-partner-flip" tabindex="0" role="button" aria-pressed="false" aria-label="View Soundappan's profile">
+                            <div class="rx-partner-flip__inner">
+                                <div class="rx-partner-flip__face rx-partner-flip__front">
+                                    <img src="images/partners%20&%20investors/19ce5bc9-97e1-40bd-91d4-b83074a23847_large.jpeg" alt="Soundappan, founder at Clarman Life Sciences" loading="lazy" />
+                                    <span class="rx-partner-flip__hint">Tap to learn more <b aria-hidden="true">&#8599;</b></span>
+                                </div>
+                                <div class="rx-partner-flip__face rx-partner-flip__back">
+
+                                    <span class="rx-partner-flip__tag">Founder</span>
+                                    <h3>Clarman Life Sciences</h3>
+                                    <p>A pharmaceutical entrepreneur bringing practical industry experience and business perspective. Supports the vision of making relevant knowledge accessible to a wider learning community.</p>
+                                </div>
+                            </div>
+                            <div class="rx-partner-profile"><h3>Soundappan</h3><p>Founder</p><span>Clarman Life Sciences</span></div>
+                        </article>
+                                                <article class="rx-partner-flip" tabindex="0" role="button" aria-pressed="false" aria-label="View Bala Subramaniyam's profile">
+                            <div class="rx-partner-flip__inner">
+                                <div class="rx-partner-flip__face rx-partner-flip__front">
+                                    <img src="images/partners%20&%20investors/2d4ca75d-ab93-460e-aed0-b64317cb696b_large.png" alt="Bala Subramaniyam, founder at Lipotek Pharmaceuticals" loading="lazy" />
+                                    <span class="rx-partner-flip__hint">Tap to learn more <b aria-hidden="true">&#8599;</b></span>
+                                </div>
+                                <div class="rx-partner-flip__face rx-partner-flip__back">
+
+                                    <span class="rx-partner-flip__tag">Founder</span>
+                                    <h3>Lipotek Pharmaceuticals</h3>
+                                    <p>A pharmaceutical entrepreneur contributing business experience and industry insights. Supports practical, accessible learning that connects knowledge with professional opportunities.</p>
+                                </div>
+                            </div>
+                            <div class="rx-partner-profile"><h3>Bala Subramaniyam</h3><p>Founder</p><span>Lipotek Pharmaceuticals</span></div>
+                        </article>
+                                                <article class="rx-partner-flip" tabindex="0" role="button" aria-pressed="false" aria-label="View Antony's profile">
+                            <div class="rx-partner-flip__inner">
+                                <div class="rx-partner-flip__face rx-partner-flip__front">
+                                    <img src="images/partners%20&%20investors/3a57d0bd-bd84-40bb-adb5-3a89422747b6_large.png" alt="Antony, marketing professional" loading="lazy" />
+                                    <span class="rx-partner-flip__hint">Tap to learn more <b aria-hidden="true">&#8599;</b></span>
+                                </div>
+                                <div class="rx-partner-flip__face rx-partner-flip__back">
+
+                                    <span class="rx-partner-flip__tag">Marketing Professional</span>
+                                    <h3>Business &amp; Outreach</h3>
+                                    <p>A marketing professional focused on outreach, engagement, and business development. Supports connecting learning opportunities with students, aspirants, and professionals.</p>
+                                </div>
+                            </div>
+                            <div class="rx-partner-profile"><h3>Antony</h3><p>Marketing Professional</p><span>Business &amp; Outreach</span></div>
+                        </article>
+                                                <article class="rx-partner-flip" tabindex="0" role="button" aria-pressed="false" aria-label="View Thippu Sultan's profile">
+                            <div class="rx-partner-flip__inner">
+                                <div class="rx-partner-flip__face rx-partner-flip__front">
+                                    <img src="images/partners%20&%20investors/b064c5a2-3ce7-4591-8ede-096778ce14a3_large.png" alt="Thippu Sultan, business owner in textiles and garments" loading="lazy" />
+                                    <span class="rx-partner-flip__hint">Tap to learn more <b aria-hidden="true">&#8599;</b></span>
+                                </div>
+                                <div class="rx-partner-flip__face rx-partner-flip__back">
+
+                                    <span class="rx-partner-flip__tag">Business Owner</span>
+                                    <h3>Textiles &amp; Garments</h3>
+                                    <p>An entrepreneur from the textiles and garments sector with hands-on business experience. Contributes a real-world perspective on enterprise, operations, and industry learning.</p>
+                                </div>
+                            </div>
+                            <div class="rx-partner-profile"><h3>Thippu Sultan</h3><p>Business Owner</p><span>Textiles &amp; Garments</span></div>
+                        </article>
+                        </div></div></section>
+                <!-- Learning insights -->
+                <section class="rx-about-insights" id="learning-insights">
+                    <div class="container ed-container">
+                        <div class="rx-about-insights__heading">
+                            <div><span class="rx-about-eyebrow">ACADEMIC INSIGHTS &amp; UPDATES</span><h2>Ideas to help you <em class="rx-about-green-heading">move forward.</em></h2></div>
+                            <p>Practical guidance for learning, exam preparation, and confident progress.</p>
+                        </div>
+                        <div class="rx-about-insights__grid">
+<article class="rx-about-insight rx-about-insight--featured">
+                                <a class="rx-about-insight__image" href="rx-live.html"><img src="images/blog/blog-1/4.png" alt="Rx Live expert webinar session" loading="lazy" /><span>01 / LIVE LEARNING</span></a>
+                                <div class="rx-about-insight__body"><a class="rx-about-insight__category" href="rx-live.html">Rx Live</a><ul><li>Expert-led sessions</li><li>Practical learning</li></ul><h3><a href="rx-live.html">Learn from Experts, in Real Time: What to Expect from Rx Live</a></h3><a class="rx-about-insight__read" href="rx-live.html">Explore Rx Live <span aria-hidden="true">&#8599;</span></a></div>
+                            </article>
+<article class="rx-about-insight rx-about-insight--compact">
+                                <a class="rx-about-insight__image" href="rx-learn.html"><img src="images/blog/blog-1/1.png" alt="School board study notes and revision guidance" loading="lazy" /><span>02 / LEARNING</span></a>
+                                <div class="rx-about-insight__body"><a class="rx-about-insight__category" href="rx-learn.html">Rx Learn</a><ul><li>12 Oct, 2024</li><li>28 Comments</li></ul><h3><a href="rx-learn.html">How to Master School Board Syllabi Using Structured Notes &amp; Revision Vaults</a></h3><a class="rx-about-insight__read" href="rx-learn.html">Explore Rx Learn <span aria-hidden="true">&#8599;</span></a></div>
+                            </article>
+<article class="rx-about-insight rx-about-insight--compact">
+                                <a class="rx-about-insight__image" href="rx-aspire.html"><img src="images/blog/blog-1/2.png" alt="Government exam preparation roadmap" loading="lazy" /><span>03 / PREPARATION</span></a>
+                                <div class="rx-about-insight__body"><a class="rx-about-insight__category" href="rx-aspire.html">Rx Aspire</a><ul><li>24 Oct, 2024</li><li>46 Comments</li></ul><h3><a href="rx-aspire.html">Comprehensive Roadmap for Upcoming Government Examinations: UPSC &amp; SSC CGL</a></h3><a class="rx-about-insight__read" href="rx-aspire.html">Explore Rx Aspire <span aria-hidden="true">&#8599;</span></a></div>
+                            </article>
+<article class="rx-about-insight rx-about-insight--compact">
+                                <a class="rx-about-insight__image" href="rx-exam.html"><img src="images/blog/blog-1/3.png" alt="Student evaluation and exam confidence" loading="lazy" /><span>04 / EVALUATION</span></a>
+                                <div class="rx-about-insight__body"><a class="rx-about-insight__category" href="rx-exam.html">Rx Exam</a><ul><li>08 Nov, 2024</li><li>35 Comments</li></ul><h3><a href="rx-exam.html">Why In-Platform Student Evaluation Drives 3x Higher Retention &amp; Exam Confidence</a></h3><a class="rx-about-insight__read" href="rx-exam.html">Explore Rx Exam <span aria-hidden="true">&#8599;</span></a></div>
+                            </article>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </section>
+                <!-- Start Call Action Area -->
+                <section class="ed-call-action ed-call-action--footer-safe position-relative">
+                    <div class="container ed-container">
+                        <div class="ed-call-action__inner position-relative">
+                            <div class="ed-call-action__shapes">
+                                <img alt="shape-1" class="ed-call-action__shape-1 rotate-ani" src="images/call-action/call-action-1/shape-1.svg" />
+                                <img alt="shape-2" class="ed-call-action__shape-2" src="images/call-action/call-action-1/shape-2.svg" />
+                                <img alt="shape-3" class="ed-call-action__shape-3 updown-ani" src="images/call-action/call-action-1/shape-3.svg" />
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="ed-call-action__img">
+                                        <img alt="call-action-img" src="images/call-action/call-action-1/call-action-img.png" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 order-class">
+                                    <div class="ed-call-action__content">
+                                        <div class="ed-section-head">
+                                            <span class="ed-section-head__sm-title">JOIN Rx ANALYTICA ONE</span>
+                                            <h3 class="ed-section-head__title">
+                                                Learning Simplified. <br />
+                                                Futures Empowered.
+                                            </h3>
+                                            <p class="ed-section-head__text">Learn simply, build practical skills, prepare with confidence, and grow with opportunities for academic and career success.</p>
+                                        </div>
+                                        <div class="ed-call-action__content-btn">
+                                            <a class="ed-btn" data-bs-target="#registerModal" data-bs-toggle="modal" href="#">
+                                                Get Started with RX Analytica<i class="fi fi-rr-arrow-small-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End Call Action Area -->
+            </main>
+
+            <!-- Start Footer Area -->
+            <footer class="ed-footer section-bg-color-1 position-relative rx-footer rx-footer--about">
+                <div class="ed-footer__top position-relative">
+                    <div class="ed-footer__shapes">
+                        <img alt="shape-1" class="ed-footer__shape-1" src="images/footer/footer-1/shape-1.svg" />
+                        <img alt="shape-2" class="ed-footer__shape-2 rotate-ani" src="images/footer/footer-1/shape-2.svg" />
+                        <img alt="shape-3" class="ed-footer__shape-3" src="images/footer/footer-1/shape-3.svg" />
+                    </div>
+                    <div class="container ed-container">
+                        <div class="row g-0">
+                            <div class="col-lg-4 col-md-6 col-12">
+                                <div class="ed-footer__widget ed-footer__about">
+                                    <a class="ed-footer__logo" href="index.html">
+                                        <img alt="footer-logo" src="images/logo.png" />
+                                    </a>
+                                    <p class="ed-footer__about-text">
+                                        Rx Analytica One is a unified educational ecosystem delivering live interactive sessions &amp; webinars (Rx Live), structured school board teaching &amp; study material sharing (Rx Learn), comprehensive government exam aspirant preparation (Rx Aspire), and in-platform student evaluation with diagnostic analytics (Rx Exam).
+                                    </p>
+                                    <ul class="ed-footer__about-social">
+                                        <li>
+                                            <a href="https://www.facebook.com/" target="_blank"><img alt="icon-dark-facebook" src="images/icons/icon-dark-facebook.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.twitter.com/" target="_blank"><img alt="icon-dark-twitter" src="images/icons/icon-dark-twitter.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.dribbble.com/" target="_blank"><img alt="icon-dark-dribbble" src="images/icons/icon-dark-dribbble.svg" /></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/" target="_blank"><img alt="icon-dark-instagram" src="images/icons/icon-dark-instagram.svg" /></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 col-12">
+                                <div class="ed-footer__widget">
+                                    <h4 class="ed-footer__widget-title">Quick Links</h4>
+                                    <ul class="ed-footer__widget-links">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="rx-live.html">Rx Live</a></li>
+                                        <li><a href="rx-learn.html">Rx Learn</a></li>
+                                        <li><a href="rx-aspire.html">Rx Aspire</a></li>
+                                        <li><a href="rx-exam.html">Rx Exam</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="ed-footer__widget contact-widget">
+                                    <h4 class="ed-footer__widget-title">Contact</h4>
+                                    <div class="ed-footer__contact">
+                                        <div class="ed-footer__contact-icon">
+                                            <img alt="icon-phone-blue" src="images/icons/icon-phone-blue.svg" />
+                                        </div>
+                                        <div class="ed-footer__contact-info">
+                                            <span>24/7 Academic Support</span>
+                                            <a href="tel:+919876543210">+91 98765 43210</a>
+                                        </div>
+                                    </div>
+                                    <div class="ed-footer__contact">
+                                        <div class="ed-footer__contact-icon">
+                                            <img alt="icon-envelope-blue" src="images/icons/icon-envelope-blue.svg" />
+                                        </div>
+                                        <div class="ed-footer__contact-info">
+                                            <span>Send Message</span>
+                                            <a href="mailto:support@rxanalytica.com">support@rxanalytica.com</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="ed-footer__widget">
+                                    <h4 class="ed-footer__widget-title">Subscribe</h4>
+                                    <p class="ed-footer__widget-text">
+                                        Stay updated with our latest live workshops, exam schedules, and curriculum releases.
+                                    </p>
+                                    <form action="#" class="ed-footer__subscribe" method="post">
+                                        <input name="email-address" placeholder="Enter email address" required="" type="email" />
+                                        <button class="ed-btn" type="submit">Subscribe<i class="fi fi-rr-arrow-small-right"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+                <div class="ed-footer__bottom">
+                    <div class="container ed-container">
+                        <div class="row">
+                            <div class="col-12">
+                                <p class="ed-footer__copyright-text text-center">
+                                    &copy; 2026 Rx Analytica One. All Rights Reserved. Transforming Education Across India.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Footer Area -->
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div aria-hidden="true" class="modal fade ed-auth__modal" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ed-auth__modal-header">
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body ed-auth__modal-body">
+                    <div class="ed-auth__modal-head">
+                        <a class="ed-auth__modal-logo" href="index.html">
+                            <img alt="logo" src="images/logo.png" />
+                        </a>
+                        <h4 class="ed-auth__modal-title">Sign In to Rx Analytica One</h4>
+                        <p class="ed-auth__modal-text">
+                            Don't have an account?
+                            <button data-bs-target="#registerModal" data-bs-toggle="modal" type="button">Register</button>
+                        </p>
+                    </div>
+                    <form action="#" class="ed-auth__form" method="post">
+                        <div class="ed-auth__form-group">
+                            <label>Email Address or Student ID</label>
+                            <input name="user-name" placeholder="student@rxanalytica.com" required="" type="text" />
+                        </div>
+                        <div class="ed-auth__form-group">
+                            <label>Password</label>
+                            <input name="password" placeholder="••••••••" required="" type="password" />
+                        </div>
+                        <div class="ed-auth__form-check form-check">
+                            <div class="form-check-remember">
+                                <input class="form-check-input" id="loginCheck" type="checkbox" value="" />
+                                <label class="form-check-label" for="loginCheck">Remember Me</label>
+                            </div>
+                            <div class="form-check-forget">
+                                <a href="#">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="ed-auth__form-btn">
+                            <button class="ed-btn" type="submit">Sign In to Dashboard<i class="fi fi-rr-arrow-small-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ed-auth__modal-footer">
+                    <div class="ed-auth__modal-third-party">
+                        <p>Or Sign In with</p>
+                        <ul class="ed-auth__modal-third-party-list">
+                            <li><a class="google-login" href="https://www.google.com/"><img alt="icon-color-google" src="images/icons/icon-color-google.svg" /></a></li>
+                            <li><a class="facebook-login" href="https://facebook.com/"><img alt="icon-color-facebook" src="images/icons/icon-color-facebook.svg" /></a></li>
+                            <li><a class="linkedin-login" href="https://www.linkedin.com/"><img alt="icon-color-linkedin" src="images/icons/icon-color-linkedin.svg" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login Modal -->
+
+    <!-- Register Modal -->
+    <div aria-hidden="true" class="modal fade ed-auth__modal" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header ed-auth__modal-header">
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body ed-auth__modal-body">
+                    <div class="ed-auth__modal-head">
+                        <a class="ed-auth__modal-logo" href="index.html">
+                            <img alt="logo" src="images/logo.png" />
+                        </a>
+                        <h4 class="ed-auth__modal-title">Join Rx Analytica One</h4>
+                        <p class="ed-auth__modal-text">
+                            Already enrolled?
+                            <button data-bs-target="#loginModal" data-bs-toggle="modal" type="button">Sign In</button>
+                        </p>
+                    </div>
+                    <form action="#" class="ed-auth__form" method="post">
+                        <div class="ed-auth__form-group">
+                            <label>Full Name</label>
+                            <input name="name" placeholder="John Doe" required="" type="text" />
+                        </div>
+                        <div class="ed-auth__form-group">
+                            <label>Email Address</label>
+                            <input name="email" placeholder="student@rxanalytica.com" required="" type="email" />
+                        </div>
+                        <div class="ed-auth__form-group">
+                            <label>Password</label>
+                            <input name="password" placeholder="••••••••" required="" type="password" />
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="regCheck">
+                                <input class="form-check-input" id="regCheck" type="checkbox" value="" />
+                                I agree with the <strong>Terms &amp; Privacy Policy</strong>
+                            </label>
+                        </div>
+                        <div class="ed-auth__form-btn">
+                            <button class="ed-btn" type="submit">Create Student Account<i class="fi fi-rr-arrow-small-right"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="ed-auth__modal-footer">
+                    <div class="ed-auth__modal-third-party">
+                        <p>Or Sign Up with</p>
+                        <ul class="ed-auth__modal-third-party-list">
+                            <li><a class="google-login" href="https://www.google.com/"><img alt="icon-color-google" src="images/icons/icon-color-google.svg" /></a></li>
+                            <li><a class="facebook-login" href="https://facebook.com/"><img alt="icon-color-facebook" src="images/icons/icon-color-facebook.svg" /></a></li>
+                            <li><a class="linkedin-login" href="https://www.linkedin.com/"><img alt="icon-color-linkedin" src="images/icons/icon-color-linkedin.svg" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Register Modal -->
+
+    <!-- Back To Top -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" height="100%" viewbox="-1 -1 102 102" width="100%">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+
+    <!-- JS (Vendor, Plugins, Main) -->
+    <script src="plugins/js/jquery.min.js"></script>
+    <script src="plugins/js/jquery-migrate.js"></script>
+    <script src="plugins/js/bootstrap.min.js"></script>
+    <script src="plugins/js/gsap/gsap.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-smoother.js"></script>
+    <script src="plugins/js/gsap/gsap-scroll-trigger.js"></script>
+    <script src="plugins/js/gsap/gsap-split-text.js"></script>
+    <script src="plugins/js/wow.min.js"></script>
+    <script src="plugins/js/owl.carousel.min.js"></script>
+    <script src="plugins/js/swiper-bundle.min.js"></script>
+    <script src="plugins/js/magnific-popup.min.js"></script>
+    <script src="plugins/js/jquery.counterup.min.js"></script>
+    <script src="plugins/js/waypoints.min.js"></script>
+    <script src="plugins/js/nice-select.min.js"></script>
+    <script src="plugins/js/backToTop.js"></script>
+    <script src="plugins/js/active.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".rx-partner-flip").forEach(function (card) {
+                function toggleCard() {
+                    var flipped = card.classList.toggle("is-flipped");
+                    card.setAttribute("aria-pressed", flipped ? "true" : "false");
+                }
+                card.addEventListener("click", toggleCard);
+                card.addEventListener("keydown", function (event) {
+                    if (event.key === "Enter" || event.key === " ") { event.preventDefault(); toggleCard(); }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

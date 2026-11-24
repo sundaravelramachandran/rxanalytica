@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#faf8f3" />
+    <title>Rx Learn | Rx Analytica One</title>
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <style>
+      /* 1. Prevent horizontal scroll and white flash immediately */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #faf8f3;
+      }
+
+      body.rx-loading {
+        overflow-y: hidden;
+      }
+
+      /* 2. Instant Preloader - No white screen, perfectly centered */
+      #preloader {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #faf8f3;
+        z-index: 9999999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: all;
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+
+      #preloader.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none !important;
+        display: none !important;
+      }
+
+      /* 3. Branded Logo Loader with pulsating green beam */
+      .rx-initial-loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        width: 240px;
+        text-align: center;
+      }
+
+      .rx-initial-loader img {
+        width: 200px;
+        height: 66px;
+        object-fit: contain;
+        animation: rxFloat 1.8s ease-in-out infinite;
+      }
+
+      .rx-initial-loader-beam {
+        width: 160px;
+        height: 4px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, transparent, #57c501 25%, #74d402 50%, #058501 75%, transparent);
+        box-shadow: 0 0 16px rgba(87, 197, 1, 0.45);
+        transform-origin: center;
+        animation: rxBeam 1.35s ease-in-out infinite;
+      }
+
+      @keyframes rxFloat {
+        0%, 100% { opacity: 0.92; transform: translateY(2px); }
+        50% { opacity: 1; transform: translateY(-3px); }
+      }
+
+      @keyframes rxBeam {
+        0%, 100% { opacity: 0.45; transform: scaleX(0.35); }
+        50% { opacity: 1; transform: scaleX(1); }
+      }
+    </style>
+  </head>
+  <body class="rx-loading">
+    <div id="preloader">
+      <div class="rx-initial-loader">
+        <img src="/images/logo.png" alt="Rx Analytica One" width="200" height="66" />
+        <div class="rx-initial-loader-beam"></div>
+      </div>
+    </div>
+    <div id="root" data-page="rx-learn"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

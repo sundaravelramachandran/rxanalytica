@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow-exams" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#021f15" flood-opacity="0.38" />
+    </filter>
+    <filter id="glow-badge" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Clipboard Board Gradients -->
+    <linearGradient id="board-body" x1="24" y1="20" x2="88" y2="104" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#058501" />
+      <stop offset="45%" stop-color="#034f01" />
+      <stop offset="100%" stop-color="#0f291f" />
+    </linearGradient>
+
+    <!-- Metallic Clip Gradients -->
+    <linearGradient id="clip-metal" x1="42" y1="14" x2="70" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="35%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#94a3b8" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+
+    <!-- Paper Gradients -->
+    <linearGradient id="paper-sheet" x1="30" y1="24" x2="82" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="85%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+
+    <!-- Pencil Gradients -->
+    <linearGradient id="pencil-body" x1="75" y1="65" x2="105" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffd54f" />
+      <stop offset="50%" stop-color="#ffb300" />
+      <stop offset="100%" stop-color="#f57f17" />
+    </linearGradient>
+    <linearGradient id="pencil-eraser" x1="98" y1="58" x2="104" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="100%" stop-color="#db2777" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Shadow Under Clipboard -->
+  <ellipse cx="56" cy="108" rx="32" ry="5.5" fill="#072017" opacity="0.45" />
+
+  <!-- ==================== CLIPBOARD BODY ==================== -->
+  <!-- Backboard 3D Depth / Bevel Edge -->
+  <rect x="23" y="19" width="66" height="88" rx="10" fill="#091c15" />
+  <rect x="24" y="18" width="66" height="88" rx="10" fill="url(#board-body)" filter="url(#shadow-exams)" stroke="#66cb01" stroke-width="1.2" />
+
+  <!-- ==================== EXAM PAPER SHEET ==================== -->
+  <rect x="30" y="26" width="54" height="74" rx="5" fill="url(#paper-sheet)" />
+  <!-- Folded Corner / Subtle Page Shadow -->
+  <path d="M30 26 L84 26 L84 95 C84 97 82 100 80 100 L34 100 C32 100 30 97 30 95 Z" fill="url(#paper-sheet)" />
+  <path d="M74 100 L84 90 L74 90 Z" fill="#cbd5e1" />
+
+  <!-- Paper Header Line -->
+  <rect x="36" y="35" width="22" height="3" rx="1.5" fill="#058501" />
+
+  <!-- Checklist Row 1: Checkbox & Line -->
+  <rect x="36" y="44" width="7" height="7" rx="2" fill="#e8f5ee" stroke="#058501" stroke-width="1" />
+  <path d="M38 47.5 L40 49.5 L45 44.5" stroke="#058501" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="47" y1="47.5" x2="76" y2="47.5" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Checklist Row 2: Checkbox & Line -->
+  <rect x="36" y="55" width="7" height="7" rx="2" fill="#e8f5ee" stroke="#058501" stroke-width="1" />
+  <path d="M38 58.5 L40 60.5 L45 55.5" stroke="#058501" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="47" y1="58.5" x2="72" y2="58.5" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Checklist Row 3: Checkbox & Line -->
+  <rect x="36" y="66" width="7" height="7" rx="2" fill="#e8f5ee" stroke="#058501" stroke-width="1" />
+  <path d="M38 69.5 L40 71.5 L45 66.5" stroke="#058501" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="47" y1="69.5" x2="68" y2="69.5" stroke="#94a3b8" stroke-width="2" stroke-linecap="round" />
+
+  <!-- Checklist Row 4: Line only -->
+  <line x1="36" y1="80" x2="62" y2="80" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+  <line x1="36" y1="87" x2="55" y2="87" stroke="#cbd5e1" stroke-width="2" stroke-linecap="round" />
+
+  <!-- ==================== "A+" EXAM GRADE BADGE STAMP ==================== -->
+  <circle cx="68" cy="85" r="9" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.4" stroke-dasharray="2 1.5" />
+  <circle cx="68" cy="85" r="7.5" fill="#fef3c7" opacity="0.8" />
+  <!-- "A+" Text -->
+  <path d="M64 88 L66.5 81 L69 88 M65 86 L68 86 M71 84.5 L75 84.5 M73 82.5 L73 86.5" stroke="#d97706" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- ==================== TOP MECHANICAL CLIP ==================== -->
+  <!-- Clip Base Plate -->
+  <path d="M44 20 C44 17 48 15 57 15 C66 15 70 17 70 20 L68 28 L46 28 Z" fill="url(#clip-metal)" filter="url(#shadow-exams)" stroke="#334155" stroke-width="0.8" />
+  <!-- Clip Hanger Arch Hole -->
+  <path d="M52 16 C52 12 62 12 62 16" stroke="url(#clip-metal)" stroke-width="2.5" fill="none" stroke-linecap="round" />
+  <!-- Clip Spring Screw / Pivot -->
+  <ellipse cx="57" cy="22" rx="3.5" ry="2" fill="#334155" />
+  <ellipse cx="57" cy="22" rx="2" ry="1.2" fill="#94a3b8" />
+
+  <!-- ==================== 3D PENCIL ACROSS BOTTOM-RIGHT ==================== -->
+  <!-- Pencil Cast Shadow -->
+  <path d="M72 88 L98 62 L103 67 L77 93 Z" fill="#072017" opacity="0.25" filter="url(#shadow-exams)" />
+
+  <!-- Pencil Hexagonal Shaft -->
+  <path d="M74 85 L96 63 L101 68 L79 90 Z" fill="url(#pencil-body)" filter="url(#shadow-exams)" stroke="#b45309" stroke-width="0.8" />
+  <!-- Pencil Facet Highlight Line -->
+  <line x1="76" y1="87" x2="98" y2="65" stroke="#fef08a" stroke-width="1.2" opacity="0.75" />
+
+  <!-- Pencil Wood Tip -->
+  <polygon points="74,85 79,90 70,95" fill="#fed7aa" stroke="#c2410c" stroke-width="0.6" />
+  <!-- Graphite Lead Point -->
+  <polygon points="71.5,93 74,90.5 70,95" fill="#334155" />
+
+  <!-- Metallic Ferrule Band -->
+  <path d="M96 63 L99 60 L104 65 L101 68 Z" fill="#e2e8f0" stroke="#64748b" stroke-width="0.6" />
+  <line x1="97.5" y1="61.5" x2="102.5" y2="66.5" stroke="#94a3b8" stroke-width="0.6" />
+
+  <!-- Eraser -->
+  <path d="M99 60 L102 57 C103.5 55.5 106 58 104.5 59.5 L104 65 Z" fill="url(#pencil-eraser)" stroke="#9d174d" stroke-width="0.6" />
+</svg>

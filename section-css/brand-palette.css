@@ -1,0 +1,691 @@
+/* Client's classroom palette: seven coordinated colors for the whole Rx site. */
+:root {
+  --rx-mist: #b1c9c3;
+  --rx-sage: #576f56;
+  --rx-lime: #c7f36b;
+  --rx-teal: #4f828f;
+  --rx-gold: #ffcd20;
+  --rx-rose: #cd9280;
+  --rx-terracotta: #d7945d;
+  --rx-sand: #e0d4b9;
+  --rx-paper: #faf8f3;
+  --rx-ink: #35463a;
+
+  /* Rx green remains the primary identity; palette colors add range and hierarchy. */
+  --ed-primary-color: var(--rx-sage);
+  --ed-theme-color: var(--rx-mist);
+  --ed-theme-gradient: linear-gradient(135deg, var(--rx-sage) 0%, var(--rx-teal) 100%);
+  --ed-secondary-color: #3e5344;
+  --ed-tertiary-color: var(--rx-gold);
+  --ed-white-color: #fff;
+  --ed-offwhite-color: var(--rx-paper);
+  --ed-title-color: var(--rx-ink);
+  --ed-paragraph-color: #536458;
+  --ed-border-color: var(--rx-sand);
+}
+
+html,
+body {
+  background-color: var(--rx-paper) !important;
+}
+
+body {
+  color: var(--ed-paragraph-color);
+}
+
+.ed-header,
+.ed-header.sticky,
+.ed-header.ed-header--style2.sticky {
+  background-color: var(--rx-paper) !important;
+  border-bottom: 1px solid rgba(87, 111, 86, 0.13);
+}
+
+.section-bg.hero-bg {
+  background:
+    radial-gradient(ellipse at 82% 14%, rgba(79, 130, 143, 0.16), transparent 34%),
+    linear-gradient(145deg, var(--rx-paper) 0%, #f2f5ef 50%, rgba(177, 201, 195, 0.7) 100%) !important;
+}
+
+.ed-features,
+.rx-activity {
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(177, 201, 195, 0.48), transparent 34%),
+    linear-gradient(135deg, #f7f7f0 0%, var(--rx-paper) 54%, #edf2ed 100%) !important;
+}
+
+.rx-ecosystem,
+.rx-beyond,
+.ed-category,
+.ed-course,
+.ed-blog,
+.ed-testimonial,
+.ed-faq,
+.ed-contact {
+  background-color: var(--rx-paper);
+}
+
+.ed-section-head__title,
+.rx-hero__title,
+.rx-about-section-heading,
+.rx-purpose__copy h2,
+.rx-ecosystem-card h3,
+.rx-beyond-card__body h3,
+.ed-contact__title,
+.ed-checkout__section-title {
+  color: var(--rx-ink) !important;
+}
+
+.rx-hero__description,
+.rx-ecosystem-card p,
+.rx-beyond-card__body p {
+  color: #536458 !important;
+}
+
+.rx-brand-highlight {
+  background: var(--rx-gold) !important;
+  color: #35463a !important;
+}
+
+.ed-btn,
+.rx-cta-btn,
+.ed-topbar__search button,
+.ed-topbar__action-icon span,
+.ed-header__auth-buttons .login-btn {
+  background: var(--ed-theme-gradient) !important;
+  color: #fff !important;
+}
+
+.ed-btn:hover,
+.rx-cta-btn:hover,
+.ed-topbar__search button:hover {
+  background: var(--rx-teal) !important;
+}
+
+.ed-topbar__info-buttons .register-btn,
+.ed-header__auth-buttons .register-btn,
+.ed-course__tag {
+  background: var(--rx-gold) !important;
+  color: #35463a !important;
+}
+
+.ed-header__menu li a:hover,
+.ed-header__menu li.active > a,
+.offcanvas__menu_item:hover,
+.offcanvas__menu_item.active,
+.ed-footer__widget-links li a:hover {
+  color: #ffcd20 !important;
+}
+
+.ed-course__card,
+.ed-blog__card,
+.ed-category__card,
+.ed-features__card,
+.ed-contact__card,
+.ed-contact__info-item,
+.ed-faq__accordion-item,
+.rx-activity__slide,
+.rx-purpose__panel,
+.rx-ecosystem-card,
+.rx-beyond-card,
+.rx-about-mission__card,
+.counter-card {
+  background-color: var(--rx-paper) !important;
+  border-color: rgba(87, 111, 86, 0.2) !important;
+}
+
+.ed-course__card:hover,
+.ed-course__card.active {
+  border-color: var(--rx-teal) !important;
+  box-shadow: 0 18px 40px rgba(79, 130, 143, 0.18) !important;
+}
+
+.ed-features__card:nth-child(4n + 1),
+.ed-category__card:nth-child(4n + 1) { --rx-card-accent: var(--rx-teal); }
+.ed-features__card:nth-child(4n + 2),
+.ed-category__card:nth-child(4n + 2) { --rx-card-accent: var(--rx-sage); }
+.ed-features__card:nth-child(4n + 3),
+.ed-category__card:nth-child(4n + 3) { --rx-card-accent: var(--rx-terracotta); }
+.ed-features__card:nth-child(4n),
+.ed-category__card:nth-child(4n) { --rx-card-accent: var(--rx-rose); }
+
+.ed-features__card,
+.ed-category__card {
+  border-top: 3px solid var(--rx-card-accent, var(--rx-mist)) !important;
+}
+
+.ed-features__icon,
+.ed-category__icon,
+.ed-contact__card-icon,
+.rx-ecosystem-card__symbol {
+  background-color: color-mix(in srgb, var(--rx-card-accent, var(--rx-mist)) 38%, white) !important;
+}
+
+.ed-features__info h4 { color: var(--rx-ink) !important; }
+.ed-features__info p { color: #536458 !important; }
+
+.rx-ecosystem-card--live { --ecosystem-color: var(--rx-teal) !important; }
+.rx-ecosystem-card--learn { --ecosystem-color: var(--rx-sage) !important; }
+.rx-ecosystem-card--aspire { --ecosystem-color: var(--rx-gold) !important; }
+.rx-ecosystem-card--exam { --ecosystem-color: var(--rx-rose) !important; }
+
+.rx-activity__image {
+  background: linear-gradient(145deg, var(--rx-mist), #eaf0e8 58%, var(--rx-sand)) !important;
+}
+
+.rx-purpose__panel {
+  background: linear-gradient(120deg, rgba(177, 201, 195, 0.78), var(--rx-paper) 58%, rgba(224, 212, 185, 0.58)) !important;
+}
+
+.rx-about-banner:not(.rx-about-banner--bright) {
+  background: linear-gradient(120deg, var(--rx-sage) 0%, var(--rx-teal) 62%, #456f79 100%) !important;
+}
+
+.rx-about-banner:not(.rx-about-banner--bright) .rx-banner-title,
+.rx-about-banner:not(.rx-about-banner--bright) .rx-banner-subtitle,
+.rx-about-banner:not(.rx-about-banner--bright) .rx-banner-breadcrumb,
+.rx-about-banner:not(.rx-about-banner--bright) .rx-banner-breadcrumb-list,
+.rx-about-banner:not(.rx-about-banner--bright) .rx-about-eyebrow {
+  color: #fff !important;
+}
+
+.rx-about-banner:not(.rx-about-banner--bright) .rx-banner-title span {
+  color: var(--rx-gold) !important;
+}
+
+/* ========================================================
+   Modern EdTech Bright Banner for About Us Page
+   ======================================================== */
+.rx-about-banner--bright {
+  background: radial-gradient(ellipse at 78% 18%, rgba(87, 197, 1, 0.18), transparent 35%), linear-gradient(135deg, #f6fcf4 0%, #ffffff 52%, #eef9ec 100%) !important;
+}
+
+.rx-about-banner--bright .rx-about-eyebrow {
+  color: #48a92a !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(87, 197, 1, 0.35) !important;
+}
+
+.rx-about-banner--bright .rx-banner-title {
+  color: #48a92a !important;
+}
+
+.rx-about-banner--bright .rx-banner-title span {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 10px;
+  background: var(--rx-gold) !important;
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+.rx-about-banner--bright .rx-banner-subtitle {
+  color: #35463a !important;
+}
+
+.rx-about-primary-link {
+  background: linear-gradient(135deg, #57c501 0%, #058501 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 10px 24px rgba(5, 133, 1, 0.3) !important;
+}
+
+.rx-about-primary-link:hover {
+  background: linear-gradient(135deg, #66cb01 0%, #036b00 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(5, 133, 1, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.rx-ecosystem,
+.rx-beyond,
+.rx-partners,
+.rx-about-insights {
+  background-color: var(--rx-paper) !important;
+}
+
+.rx-about-insight__category,
+.rx-about-insight__read,
+.rx-ecosystem-card a {
+  color: #48a92a !important;
+  border-color: rgba(79, 130, 143, 0.38) !important;
+}
+
+.rx-about-insight__category:hover,
+.rx-about-insight__read:hover,
+.rx-about-primary-link:hover,
+.rx-ecosystem-card a:hover {
+  background: var(--rx-teal) !important;
+  color: #fff !important;
+}
+
+.rx-aspire-card,
+.rx-about-mission__card,
+.rx-beyond-card__body {
+  background-color: var(--rx-paper) !important;
+  border-color: rgba(87, 111, 86, 0.2) !important;
+}
+
+.rx-aspire-card:nth-child(4n + 1) { border-top: 3px solid var(--rx-teal) !important; }
+.rx-aspire-card:nth-child(4n + 2) { border-top: 3px solid var(--rx-sage) !important; }
+.rx-aspire-card:nth-child(4n + 3) { border-top: 3px solid var(--rx-terracotta) !important; }
+.rx-aspire-card:nth-child(4n) { border-top: 3px solid var(--rx-rose) !important; }
+
+.rx-aspire-banner {
+  background: linear-gradient(120deg, var(--rx-teal), var(--rx-sage)) !important;
+}
+
+.rx-footer--about .ed-footer__bottom {
+  background: #edf6e7 !important;
+}
+
+#rxCardsDeck .rx-program-swap-card.live-theme { --rx-program-accent: var(--rx-teal); }
+#rxCardsDeck .rx-program-swap-card.learn-theme { --rx-program-accent: var(--rx-sage); }
+#rxCardsDeck .rx-program-swap-card.aspire-theme { --rx-program-accent: var(--rx-gold); }
+#rxCardsDeck .rx-program-swap-card.exam-theme { --rx-program-accent: var(--rx-rose); }
+#rxCardsDeck .rx-program-swap-card { border-color: color-mix(in srgb, var(--rx-program-accent) 60%, white); }
+#rxCardsDeck .rx-swap-program-icon { border-color: var(--rx-program-accent); }
+#rxCardsDeck .rx-card-popout { color: #48a92a; }
+
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+  border-color: var(--rx-sand);
+}
+
+::selection {
+  color: #fff;
+  background: var(--rx-teal);
+}
+
+/* Purpose story: knowledge opening into the real world */
+.rx-about-mission.rx-purpose { overflow: hidden; padding: clamp(76px, 9vw, 124px) 0; background: radial-gradient(ellipse at 88% 45%, rgba(177,201,195,.38), transparent 36%), linear-gradient(135deg,#f8f6ef 0%,#fff 54%,#f1f5f0 100%) !important; }
+.rx-purpose-story { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(350px,.92fr); align-items: center; gap: clamp(42px,7vw,100px); }
+.rx-purpose-story__copy { max-width: 680px; }
+.rx-purpose-story__copy > .rx-about-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; color: var(--rx-teal) !important; font-size: 11px; font-weight: 800; letter-spacing: .19em; }
+.rx-purpose-story__copy > .rx-about-eyebrow::before { width: 28px; height: 2px; background: var(--rx-terracotta); content: ""; }
+.rx-purpose-story__copy h2 { margin: 0 0 22px; color: var(--rx-ink) !important; font-size: clamp(40px,5vw,68px); font-weight: 750; letter-spacing: -.055em; line-height: 1.04; }
+.rx-purpose-story__copy h2 span { color: #48a92a !important; }
+.rx-purpose-story__copy p { max-width: 620px; margin: 0 0 14px; color: #56645c; font-size: 15px; line-height: 1.8; }
+.rx-purpose-story__copy .rx-purpose-story__lead { max-width: 590px; margin-bottom: 16px; color: var(--rx-ink); font-size: clamp(19px,2vw,23px); font-weight: 650; line-height: 1.48; }
+.rx-purpose-pillars { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 28px 0 0; padding: 0; list-style: none; }
+.rx-purpose-pillars li { display: flex; align-items: center; gap: 12px; min-height: 62px; padding: 10px 13px; border: 1px solid rgba(87,111,86,.13); border-radius: 15px; background: rgba(255,255,255,.77); color: var(--rx-ink); font-size: 13px; font-weight: 650; box-shadow: 0 7px 20px rgba(39,65,54,.045); transition: transform .25s ease,box-shadow .25s ease; }
+.rx-purpose-pillars li:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(39,65,54,.1); }
+.rx-purpose-pillars__icon { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: #e4eeea; color: var(--rx-teal); }
+.rx-purpose-pillars li:nth-child(2) .rx-purpose-pillars__icon { background: #f6ebce; color: #a77a24; }
+.rx-purpose-pillars li:nth-child(3) .rx-purpose-pillars__icon { background: #f3e2dc; color: #a86450; }
+.rx-purpose-pillars li:nth-child(4) .rx-purpose-pillars__icon { background: #e8ece1; color: #48a92a; }
+.rx-purpose-pillars__icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.rx-purpose-art { position: relative; display: grid; min-height: 470px; place-items: center; perspective: 1000px; isolation: isolate; }
+.rx-purpose-art::before { position: absolute; z-index: -2; width: min(88%,390px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 36% 30%,#fff 0 5%,#e7eee8 32%,#d4e2dc 68%,#c8d8d1 100%); box-shadow: inset -22px -24px 50px rgba(58,91,78,.13),0 38px 80px rgba(48,78,65,.13); content: ""; }
+.rx-purpose-art__orbit { position: absolute; width: min(104%,465px); aspect-ratio: 1; border: 1px solid rgba(79,130,143,.28); border-radius: 50%; transform: rotateX(66deg) rotateZ(-20deg); }
+.rx-purpose-art__orbit--two { width: min(116%,520px); border-color: rgba(205,146,128,.28); transform: rotateX(67deg) rotateZ(38deg); }
+.rx-purpose-art__book { position: relative; display: flex; width: 280px; height: 190px; transform: rotateX(55deg) rotateZ(-12deg) translateY(-10px); transform-style: preserve-3d; filter: drop-shadow(0 30px 20px rgba(35,65,55,.18)); animation: rx-purpose-book-float 5s ease-in-out infinite; }
+.rx-purpose-art__page { position: relative; display: flex; width: 50%; height: 100%; flex-direction: column; justify-content: center; gap: 14px; padding: 28px 24px; border: 1px solid rgba(87,111,86,.18); background: linear-gradient(145deg,#fffdf5,#e9dfc6); box-shadow: inset 0 -12px 0 rgba(87,111,86,.08); }
+.rx-purpose-art__page--left { border-radius: 13px 2px 3px 13px; transform: skewY(7deg); transform-origin: right center; }
+.rx-purpose-art__page--right { border-radius: 2px 13px 13px 3px; transform: skewY(-7deg); transform-origin: left center; }
+.rx-purpose-art__page i { display: block; height: 5px; border-radius: 5px; background: rgba(79,130,143,.35); }
+.rx-purpose-art__page i:nth-child(2) { width: 75%; background: rgba(205,146,128,.42); }
+.rx-purpose-art__page i:nth-child(3) { width: 52%; background: rgba(87,111,86,.28); }
+.rx-purpose-art__spine { position: absolute; z-index: 2; top: 6px; bottom: 3px; left: calc(50% - 4px); width: 8px; border-radius: 8px; background: linear-gradient(90deg,#b18047,#e4b85d,#a8733d); transform: translateZ(5px); }
+.rx-purpose-art__badge { position: absolute; display: grid; width: 58px; height: 58px; place-items: center; border: 1px solid rgba(255,255,255,.8); border-radius: 19px; background: linear-gradient(145deg,#fff,#e7eee8); color: var(--rx-teal); font-size: 31px; font-weight: 700; box-shadow: 0 16px 30px rgba(40,69,56,.15),inset 0 1px #fff; animation: rx-purpose-badge-float 4s ease-in-out infinite; }
+.rx-purpose-art__badge--idea { top: 14%; left: 12%; color: #be8e32; animation-delay: -.8s; }
+.rx-purpose-art__badge--world { top: 20%; right: 9%; color: var(--rx-teal); animation-delay: -1.9s; }
+.rx-purpose-art__badge--growth { right: 13%; bottom: 15%; color: var(--rx-rose); animation-delay: -2.7s; }
+.rx-purpose-art__caption { position: absolute; bottom: 18px; color: #48a92a; font-size: 10px; font-weight: 800; letter-spacing: .22em; }
+@keyframes rx-purpose-book-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -11px; } }
+@keyframes rx-purpose-badge-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+@media (max-width: 991.98px) { .rx-purpose-story { grid-template-columns: minmax(0,1fr) minmax(280px,.8fr); gap: 28px; } .rx-purpose-art { min-height: 390px; } .rx-purpose-art__book { scale: .82; } }
+@media (max-width: 767.98px) { .rx-about-mission.rx-purpose { padding: 66px 0 74px; } .rx-purpose-story { grid-template-columns: 1fr; } .rx-purpose-story__copy h2 { font-size: clamp(38px,10vw,54px); } .rx-purpose-art { min-height: 340px; order: -1; } .rx-purpose-art::before { width: min(76%,300px); } .rx-purpose-art__orbit { width: min(92%,360px); } .rx-purpose-art__orbit--two { width: min(104%,405px); } .rx-purpose-art__book { scale: .72; } .rx-purpose-art__badge { width: 48px; height: 48px; border-radius: 16px; font-size: 25px; } .rx-purpose-art__badge--idea { left: 8%; } .rx-purpose-art__badge--world { right: 6%; } .rx-purpose-art__badge--growth { right: 9%; bottom: 13%; } }
+@media (max-width: 430px) { .rx-purpose-pillars { grid-template-columns: 1fr; gap: 9px; } .rx-purpose-art { min-height: 300px; } .rx-purpose-art__book { scale: .62; } }
+@media (prefers-reduced-motion: reduce) { .rx-purpose-art__book,.rx-purpose-art__badge { animation: none; } .rx-purpose-pillars li { transition: none; } }
+
+/* Our Purpose: realistic portrait with subtle, layered depth instead of orbit art. */
+.rx-purpose-art { min-height: 500px; perspective: 1400px; }
+.rx-purpose-art::before { display: none; }
+.rx-purpose-art__orbit,
+.rx-purpose-art__book,
+.rx-purpose-art__badge { display: none; }
+.rx-purpose-art__photo-wrap { position: relative; width: min(78%, 370px); height: min(460px, 45vw); min-height: 390px; overflow: hidden; border: 1px solid rgba(255,255,255,.9); border-radius: 34px; background: #e5e1d6; box-shadow: 0 34px 74px rgba(28,44,36,.2), 0 8px 22px rgba(28,44,36,.1), inset 0 1px 0 #fff; transform: rotateY(-8deg) rotateX(2deg) translateZ(0); transform-style: preserve-3d; transition: transform .7s cubic-bezier(.2,.75,.25,1), box-shadow .7s ease; animation: rx-purpose-photo-drift 7s ease-in-out infinite; }
+.rx-purpose-art__photo-wrap::after { position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.52); border-radius: inherit; box-shadow: inset 0 0 0 10px rgba(255,255,255,.08), inset 0 -50px 70px rgba(13,28,18,.14); content: ""; pointer-events: none; }
+.rx-purpose-art__photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 28%; transform: scale(1.025); }
+.rx-purpose-art__photo-glare { position: absolute; z-index: 1; inset: -20% auto -20% -90%; width: 48%; background: linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent); filter: blur(2px); transform: skewX(-16deg); animation: rx-purpose-photo-glare 8s ease-in-out infinite; pointer-events: none; }
+.rx-purpose-art:hover .rx-purpose-art__photo-wrap { transform: rotateY(-2deg) rotateX(0) translateY(-5px) translateZ(18px); box-shadow: 0 42px 88px rgba(28,44,36,.23), 0 10px 26px rgba(28,44,36,.12), inset 0 1px 0 #fff; }
+.rx-purpose-art__note { position: absolute; z-index: 2; display: flex; align-items: center; gap: 12px; max-width: 255px; padding: 13px 17px 13px 13px; border: 1px solid rgba(255,255,255,.82); border-radius: 17px; background: rgba(255,255,255,.88); box-shadow: 0 16px 35px rgba(28,44,36,.14), inset 0 1px 0 #fff; backdrop-filter: blur(14px); animation: rx-purpose-note-float 6s ease-in-out infinite; }
+.rx-purpose-art__note--top { top: 18%; left: 0; }
+.rx-purpose-art__note--bottom { right: -1%; bottom: 17%; animation-delay: -3s; }
+.rx-purpose-art__note-mark { display: grid; flex: 0 0 38px; width: 38px; height: 38px; place-items: center; border-radius: 12px; background: linear-gradient(145deg,#e5f2e8,#d4e7d9); color: #48a92a; font-size: 11px; font-weight: 800; letter-spacing: .04em; }
+.rx-purpose-art__note strong,.rx-purpose-art__note small { display: block; }
+.rx-purpose-art__note strong { color: #1b2b22; font-size: 12px; font-weight: 750; }
+.rx-purpose-art__note small { margin-top: 3px; color: #66756b; font-size: 10px; }
+.rx-purpose-art__caption { bottom: 1%; color: #718276; font-size: 9px; letter-spacing: .2em; }
+@keyframes rx-purpose-photo-drift { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+@keyframes rx-purpose-note-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes rx-purpose-photo-glare { 0%,52% { left: -90%; opacity: 0; } 62% { opacity: .8; } 78%,100% { left: 150%; opacity: 0; } }
+@media (max-width: 991.98px) { .rx-purpose-art { min-height: 430px; } .rx-purpose-art__photo-wrap { width: min(76%,350px); height: 410px; min-height: 0; } }
+@media (max-width: 767.98px) { .rx-purpose-art { min-height: 390px; order: -1; } .rx-purpose-art__photo-wrap { width: min(74%,330px); height: 380px; } .rx-purpose-art__note--top { left: 0; } .rx-purpose-art__note--bottom { right: 0; } }
+@media (max-width: 430px) { .rx-purpose-art { min-height: 345px; } .rx-purpose-art__photo-wrap { width: min(78%,290px); height: 330px; border-radius: 26px; } .rx-purpose-art__note { gap: 8px; max-width: 205px; padding: 10px 12px 10px 10px; } .rx-purpose-art__note--top { top: 15%; left: -4px; } .rx-purpose-art__note--bottom { right: -4px; bottom: 15%; } .rx-purpose-art__note-mark { flex-basis: 32px; width: 32px; height: 32px; } .rx-purpose-art__note strong { font-size: 10px; } .rx-purpose-art__note small { font-size: 9px; } }
+@media (prefers-reduced-motion: reduce) { .rx-purpose-art__photo-wrap,.rx-purpose-art__note,.rx-purpose-art__photo-glare { animation: none; transition: none; } }
+
+/* Match the About purpose photo to the full text column height on wide screens. */
+@media (min-width: 992px) {
+  #root[data-page="about"] .rx-purpose-story { align-items: stretch; }
+  #root[data-page="about"] .rx-purpose-art { min-height: 560px; height: 100%; }
+  #root[data-page="about"] .rx-purpose-art__photo-wrap { height: 100%; min-height: 560px; max-height: none; }
+}
+/* Give the About page hero and purpose copy more room on phones. */
+@media (max-width: 767.98px) {
+  #root[data-page="about"] .rx-about-banner--bright {
+    padding: 52px 0 48px;
+  }
+
+  #root[data-page="about"] .rx-about-banner--bright .rx-banner-title {
+    margin-bottom: 20px;
+    font-size: clamp(28px, 8.2vw, 40px);
+    line-height: 1.13;
+    letter-spacing: -.04em;
+  }
+
+  #root[data-page="about"] .rx-about-banner--bright .rx-banner-title span {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 7px auto 0;
+    padding: 5px 10px;
+    font-size: .84em;
+    line-height: 1.08;
+    white-space: nowrap;
+  }
+
+  #root[data-page="about"] .rx-about-banner--bright .rx-banner-subtitle {
+    max-width: 34ch;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  #root[data-page="about"] .rx-about-primary-link {
+    max-width: 100%;
+    justify-content: center;
+    line-height: 1.35;
+  }
+
+  #root[data-page="about"] .rx-purpose-story {
+    gap: 30px;
+  }
+
+  #root[data-page="about"] .rx-purpose-story__copy h2 {
+    margin-bottom: 20px;
+  }
+
+  #root[data-page="about"] .rx-purpose-story__copy .rx-purpose-story__lead {
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  #root[data-page="about"] .rx-purpose-story__copy p:not(.rx-purpose-story__lead) {
+    margin-bottom: 16px;
+    line-height: 1.75;
+  }
+}
+/* Warm yellow and lime accents across the site. */
+:root {
+  --ed-theme-color: var(--rx-lime);
+  --ed-theme-gradient: linear-gradient(135deg, var(--rx-sage), #78876a);
+  --ed-tertiary-color: var(--rx-gold);
+}
+.section-bg.hero-bg { background: radial-gradient(ellipse at 83% 12%, rgba(255,205,32,.24),transparent 33%),linear-gradient(145deg,#fbf8ef 0%,var(--rx-paper) 54%,rgba(199,243,107,.2) 100%) !important; }
+.ed-features,.rx-activity { background: radial-gradient(ellipse at 12% 12%,rgba(255,205,32,.18),transparent 32%),linear-gradient(135deg,#fbf8ef 0%,var(--rx-paper) 58%,#eef2e9 100%) !important; }
+.ed-btn,.rx-cta-btn,.ed-topbar__search button,.ed-topbar__action-icon span,.ed-header__auth-buttons .login-btn { background: var(--rx-gold) !important; color: #111 !important; box-shadow: 0 8px 20px rgba(180,133,40,.18); }
+.ed-btn:hover,.rx-cta-btn:hover,.ed-topbar__search button:hover,.ed-header__auth-buttons .login-btn:hover,.ed-header__auth-buttons .register-btn:hover,.register-btn:hover,.login-btn:hover { background: linear-gradient(135deg, #57c501 0%, #058501 100%) !important; color: #fff !important; border-color: #57c501 !important; box-shadow: 0 8px 22px rgba(87,197,1,.45) !important; }
+.ed-topbar__info-buttons .register-btn,.ed-header__auth-buttons .register-btn,.ed-course__tag,.rx-brand-highlight { background: var(--rx-gold) !important; color: #111 !important; }
+.ed-header__menu li a:hover,.offcanvas__menu_item:hover,.ed-footer__widget-links li a:hover { color: #48a92a !important; }
+.ed-course__card,.ed-blog__card,.ed-category__card,.ed-features__card,.ed-contact__card,.ed-contact__info-item,.ed-faq__accordion-item,.rx-activity__slide,.rx-purpose__panel,.rx-ecosystem-card,.rx-beyond-card,.rx-about-mission__card,.counter-card { border-color: rgba(224,212,185,.82) !important; }
+.ed-course__card:hover,.ed-course__card.active { border-color: var(--rx-gold) !important; box-shadow: 0 18px 40px rgba(180,133,40,.16) !important; }
+.ed-features__card:nth-child(4n + 1),.ed-category__card:nth-child(4n + 1) { --rx-card-accent: var(--rx-sage); }
+.ed-features__card:nth-child(4n + 2),.ed-category__card:nth-child(4n + 2) { --rx-card-accent: var(--rx-gold); }
+.ed-features__card:nth-child(4n + 3),.ed-category__card:nth-child(4n + 3) { --rx-card-accent: var(--rx-terracotta); }
+.ed-features__card:nth-child(4n),.ed-category__card:nth-child(4n) { --rx-card-accent: var(--rx-sand); }
+.rx-ecosystem-card--live { --ecosystem-color: var(--rx-sage) !important; }
+.rx-ecosystem-card--learn { --ecosystem-color: var(--rx-gold) !important; }
+.rx-ecosystem-card--aspire { --ecosystem-color: var(--rx-terracotta) !important; }
+.rx-ecosystem-card--exam { --ecosystem-color: var(--rx-rose) !important; }
+.rx-about-banner:not(.rx-about-banner--bright),.rx-aspire-banner { background: linear-gradient(115deg,var(--rx-sage) 0%,#718167 70%,#b9944b 100%) !important; }
+.rx-about-banner .rx-banner-title span { display: inline-block; padding: 3px 12px; border-radius: 10px; background: var(--rx-gold); color: #111 !important; }
+.rx-purpose-pillars li:nth-child(4) .rx-purpose-pillars__icon { background: var(--rx-lime); color: #20251a; }
+.rx-purpose-art__spine { background: linear-gradient(90deg,#b18047,var(--rx-gold),#a8733d); }
+#home .rx-hero__title-first { color: #48a92a !important; }
+#home .rx-hero__title .rx-brand-highlight { background: var(--rx-gold) !important; color: #111 !important; animation: none !important; text-shadow: none !important; }
+.rx-hero-tech-line--highlight { display: inline-block; width: fit-content; min-width: 0; max-width: 100%; height: auto; padding: 5px 14px; border-radius: 14px; background: var(--rx-gold); color: #111 !important; font-size: inherit; font-weight: 800; line-height: 1.08; }
+@media (max-width: 767.98px) { .rx-hero-tech-line--highlight { padding: 4px 11px; border-radius: 11px; } }
+
+
+/* ========================================================
+   Logo Theme Hover for Buttons (Explore Programs, Register, Log In)
+   ======================================================== */
+.rx-cta-btn:hover,
+.ed-btn:hover {
+  background: linear-gradient(135deg, #57c501 0%, #058501 100%) !important;
+  color: #ffffff !important;
+  border-color: #57c501 !important;
+  box-shadow: 0 12px 28px -4px rgba(5, 133, 1, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.rx-cta-btn:hover .rx-cta-icon {
+  background: #ffffff !important;
+  color: #48a92a !important;
+  transform: translateX(3px);
+}
+
+.ed-header__auth-buttons .register-btn:hover,
+.ed-topbar__info-buttons .register-btn:hover,
+.offcanvas__btn .register-btn:hover,
+.register-btn:hover {
+  background: linear-gradient(135deg, #57c501 0%, #058501 100%) !important;
+  color: #ffffff !important;
+  border-color: #57c501 !important;
+  box-shadow: 0 8px 22px rgba(87, 197, 1, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+.ed-header__auth-buttons .login-btn:hover,
+.ed-topbar__info-buttons .login-btn:hover,
+.offcanvas__btn .login-btn:hover,
+.login-btn:hover {
+  background: linear-gradient(135deg, #57c501 0%, #058501 100%) !important;
+  color: #ffffff !important;
+  border-color: #57c501 !important;
+  box-shadow: 0 8px 22px rgba(87, 197, 1, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+/* About page uses the same bright Rx green system as the home page. */
+#root[data-page="about"] {
+  --rx-sage: #16852a;
+  --rx-teal: #058501;
+  --rx-lime: #c7f36b;
+  --rx-paper: #f9fff6;
+  --rx-ink: #183322;
+  --ed-primary-color: #16852a;
+  --ed-theme-color: #57c501;
+  --ed-theme-gradient: linear-gradient(135deg,#57c501 0%,#058501 100%);
+}
+#root[data-page="about"] .rx-about-banner--bright {
+  background: radial-gradient(ellipse at 82% 16%,rgba(87,197,1,.2),transparent 35%),linear-gradient(135deg,#f4fff0 0%,#ffffff 54%,#ebf9e5 100%) !important;
+}
+#root[data-page="about"] .rx-about-banner--bright .rx-banner-title span {
+  background: #ffcd20 !important;
+  color: #000000 !important;
+}
+#root[data-page="about"] .rx-about-banner--bright .rx-banner-title { color: #48a92a !important; }
+#root[data-page="about"] .rx-about-banner--bright .rx-about-eyebrow { color: #48a92a !important; }
+#root[data-page="about"] .rx-about-banner--bright .rx-banner-subtitle { color: #000000 !important; }
+#root[data-page="about"] .rx-about-primary-link {
+  background: linear-gradient(135deg,#57c501 0%,#058501 100%) !important;
+  box-shadow: 0 10px 24px rgba(5,133,1,.24) !important;
+}
+#root[data-page="about"] .rx-about-primary-link:hover { background: linear-gradient(135deg,#66cb01 0%,#036b00 100%) !important; }
+#root[data-page="about"] .rx-about-mission.rx-purpose {
+  background: radial-gradient(ellipse at 88% 42%,rgba(87,197,1,.12),transparent 38%),linear-gradient(135deg,#f4fff0 0%,#ffffff 55%,#eef9e9 100%) !important;
+}
+#root[data-page="about"] .rx-purpose-story__copy > .rx-about-eyebrow,
+#root[data-page="about"] .rx-about-section-heading .rx-about-eyebrow,
+#root[data-page="about"] .rx-beyond__heading .rx-about-eyebrow { color: #48a92a !important; }
+#root[data-page="about"] .rx-purpose-story__copy > .rx-about-eyebrow::before { background: #57c501; }
+#root[data-page="about"] .rx-purpose-story__copy h2 span { color: #48a92a !important; }
+#root[data-page="about"] .rx-purpose-story__copy h2 { font-size: clamp(32px, 3.2vw, 56px) !important; letter-spacing: -.025em; line-height: 1.12; word-spacing: .02em; }
+#root[data-page="about"] .rx-purpose-story__copy h2 > .rx-about-heading-line { display: block; margin-top: 8px; white-space: nowrap; color: #48a92a !important; letter-spacing: inherit; word-spacing: inherit; }
+#root[data-page="about"] .rx-purpose-story__copy h2 > .rx-about-heading-line--accent { color: #48a92a !important; }
+@media (max-width: 767.98px) { #root[data-page="about"] .rx-purpose-story__copy h2 { font-size: clamp(24px, 7.2vw, 38px) !important; } }
+#root[data-page="about"] .rx-about-green-heading { color: #48a92a !important; }
+#root[data-page="about"] .rx-about-green-heading em { color: #48a92a !important; }
+#root[data-page="about"] .rx-purpose-pillars li:nth-child(2) .rx-purpose-pillars__icon,
+#root[data-page="about"] .rx-purpose-pillars li:nth-child(3) .rx-purpose-pillars__icon {
+  background: #e8f7e2;
+  color: #48a92a;
+}
+#root[data-page="about"] .rx-ecosystem,
+#root[data-page="about"] .rx-beyond,
+#root[data-page="about"] .rx-partners {
+  background: linear-gradient(145deg,#f5fff1 0%,#ffffff 52%,#eff9eb 100%) !important;
+}
+#root[data-page="about"] .rx-ecosystem-card--live { --ecosystem-color: #57c501 !important; }
+#root[data-page="about"] .rx-ecosystem-card--learn { --ecosystem-color: #36ad19 !important; }
+#root[data-page="about"] .rx-ecosystem-card--aspire { --ecosystem-color: #16852a !important; }
+#root[data-page="about"] .rx-ecosystem-card--exam { --ecosystem-color: #76c943 !important; }
+#root[data-page="about"] .rx-about-goals__grid::before {
+  background: linear-gradient(90deg,rgba(5,133,1,.12),rgba(87,197,1,.38) 34%,#b9ed84 50%,rgba(87,197,1,.38) 66%,rgba(5,133,1,.12));
+}
+#root[data-page="about"] .rx-about-goals .rx-about-section-heading h2::after { background: linear-gradient(90deg,#57c501,#8de25a); }
+#root[data-page="about"] .rx-about-goal:nth-child(2n) > span { background: #16852a; }
+#root[data-page="about"] .rx-about-goal:hover > span { background: #058501; }
+#root[data-page="about"] .rx-partner-profile p { color: #48a92a; }
+#root[data-page="about"] .rx-partner-flip:focus-visible { outline-color: #57c501; }
+
+
+/* Keep the clarity label over the open background area beside the graduate's face. */
+#root[data-page="about"] .rx-purpose-art__note--top {
+  top: 10%;
+  right: 0;
+  left: auto;
+}
+
+
+/* Match both lines of the index WHO WE ARE heading to the requested green. */
+#root[data-page="index"] .rx-who-we-are__title-line,
+#root[data-page="index"] .rx-who-we-are__title-line--accent {
+  color: #48a92a !important;
+}
+
+/* Homepage hero: white canvas with yellow program-card accents. */
+.section-bg.hero-bg {
+  background: linear-gradient(145deg, #ffffff 0%, #fffef8 58%, #fff7d6 100%) !important;
+}
+
+#home .rx-hero__title-first {
+  color: #9a7400 !important;
+}
+
+#home .rx-hero__title .rx-brand-highlight {
+  background: #ffcd20 !important;
+  color: #111 !important;
+}
+
+#home .rx-cta-btn,
+#home .rx-cta-btn:hover {
+  background: #ffcd20 !important;
+  border-color: #e8b900 !important;
+  color: #111 !important;
+  box-shadow: 0 10px 24px rgba(189, 145, 12, 0.2) !important;
+}
+
+#home .rx-cta-btn .rx-cta-icon,
+#home .rx-cta-btn:hover .rx-cta-icon {
+  background: #fff8dc !important;
+  color: #8b6900 !important;
+}
+
+#home #rxCardsDeck .rx-card-item {
+  --pillar-color: #ffcd20 !important;
+}
+
+#home #rxCardsDeck .rx-card-front {
+  background: linear-gradient(145deg, #ffffff 0%, #fffef8 58%, #fff7d6 100%) !important;
+  border-color: rgba(255, 205, 32, 0.4) !important;
+  box-shadow: 0 2px 0 rgba(255, 255, 255, 0.96) inset, 0 12px 22px rgba(189, 145, 12, 0.12) !important;
+}
+
+#home #rxCardsDeck .rx-card-front::after {
+  background: rgba(189, 145, 12, 0.18) !important;
+}
+
+#home #rxCardsDeck .rx-card-title,
+#home #rxCardsDeck .rx-card-corner-arrow {
+  color: #8b6900 !important;
+}
+
+#home #rxCardsDeck .rx-card-pill {
+  background: #fff8dc !important;
+  border-color: #f0d77b !important;
+  color: #806000 !important;
+}
+
+#home #rxCardsDeck .rx-card-corner-arrow {
+  background: #fff8dc !important;
+  border-color: #f0d77b !important;
+  box-shadow: 0 4px 10px rgba(189, 145, 12, 0.14) !important;
+}
+
+#home #rxCardsDeck .rx-card-item:hover .rx-card-corner-arrow {
+  background: #ffcd20 !important;
+  border-color: #e8b900 !important;
+  color: #111 !important;
+  box-shadow: 0 4px 14px rgba(189, 145, 12, 0.24) !important;
+}
+
+#home #rxCardsDeck .rx-card-3d-wrap {
+  background: linear-gradient(145deg, #fffef8, #fff4c8) !important;
+  border-color: rgba(232, 185, 0, 0.28) !important;
+  box-shadow: 7px 8px 0 rgba(189, 145, 12, 0.1), 0 10px 18px rgba(189, 145, 12, 0.12), 0 1px 0 #fff inset !important;
+}
+
+/* Override the desktop hero line cap so the animated glyphs have room to render. */
+#home .rx-hero__title--tech {
+  min-height: 168px !important;
+}
+
+#home .rx-hero-tech-line {
+  height: 80px !important;
+  overflow: visible !important;
+}
+
+@media (max-width: 991.98px) {
+  #home .rx-hero__title--tech { min-height: 152px !important; }
+  #home .rx-hero-tech-line { height: 72px !important; }
+}
+
+@media (max-width: 767.98px) {
+  #home .rx-hero__title--tech { min-height: 132px !important; }
+  #home .rx-hero-tech-line { height: 62px !important; }
+}
+
+@media (max-width: 360px) {
+  #home .rx-hero__title--tech { min-height: 112px !important; }
+  #home .rx-hero-tech-line { height: 52px !important; }
+}
+
+/* Let the yellow headline highlight fit its text; only the animated line needs extra height. */
+#home .rx-hero-tech-line.rx-hero-tech-line--highlight {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 5px 14px !important;
+  line-height: 1.08 !important;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767.98px) {
+  #home .rx-hero-tech-line.rx-hero-tech-line--highlight {
+    padding: 4px 11px !important;
+  }
+}

@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow-learn" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#021f15" flood-opacity="0.35" />
+    </filter>
+
+    <!-- Book 1 (Bottom) Gradients -->
+    <linearGradient id="book-bot-spine" x1="16" y1="84" x2="30" y2="102" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#143729" />
+      <stop offset="50%" stop-color="#245842" />
+      <stop offset="100%" stop-color="#123527" />
+    </linearGradient>
+    <linearGradient id="book-bot-cover" x1="26" y1="82" x2="100" y2="102" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#058501" />
+      <stop offset="50%" stop-color="#034f01" />
+      <stop offset="100%" stop-color="#0f291f" />
+    </linearGradient>
+    <linearGradient id="book-pages" x1="30" y1="80" x2="98" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#e8f3ec" />
+      <stop offset="100%" stop-color="#cbe3d4" />
+    </linearGradient>
+
+    <!-- Book 2 (Middle) Gradients -->
+    <linearGradient id="book-mid-spine" x1="22" y1="66" x2="36" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#66cb01" />
+      <stop offset="50%" stop-color="#058501" />
+      <stop offset="100%" stop-color="#034f01" />
+    </linearGradient>
+    <linearGradient id="book-mid-cover" x1="30" y1="64" x2="94" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#57c501" />
+      <stop offset="40%" stop-color="#3ca200" />
+      <stop offset="100%" stop-color="#034f01" />
+    </linearGradient>
+
+    <!-- Cap Gradients -->
+    <linearGradient id="cap-top" x1="20" y1="36" x2="100" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#058501" />
+      <stop offset="35%" stop-color="#034f01" />
+      <stop offset="70%" stop-color="#0f291f" />
+      <stop offset="100%" stop-color="#081812" />
+    </linearGradient>
+    <linearGradient id="cap-skull" x1="42" y1="42" x2="78" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#034f01" />
+      <stop offset="100%" stop-color="#091c15" />
+    </linearGradient>
+    <linearGradient id="gold-tassel" x1="58" y1="36" x2="92" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fff1b0" />
+      <stop offset="30%" stop-color="#ffcd20" />
+      <stop offset="70%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Shadow Under Books -->
+  <ellipse cx="60" cy="107" rx="36" ry="6" fill="#072017" opacity="0.45" />
+
+  <!-- ==================== BOOK 1 (BOTTOM) ==================== -->
+  <!-- Bottom Book Spine & Cover -->
+  <path d="M22 88 L34 83 L100 87 L88 94 Z" fill="url(#book-bot-cover)" />
+  <!-- Bottom Book Pages (Side & Front) -->
+  <path d="M34 84 L99 88 L96 99 L31 96 Z" fill="url(#book-pages)" stroke="#b7d5c2" stroke-width="0.5" />
+  <!-- Page line details -->
+  <line x1="34" y1="88" x2="97" y2="92" stroke="#a0c5ad" stroke-width="0.8" opacity="0.6" />
+  <line x1="33" y1="92" x2="96" y2="96" stroke="#a0c5ad" stroke-width="0.8" opacity="0.6" />
+  <!-- Bottom Book Spine Curve -->
+  <path d="M20 89 C18 93 18 97 21 101 L31 97 C28 93 28 89 31 85 Z" fill="url(#book-bot-spine)" stroke="#66cb01" stroke-width="0.8" />
+  <!-- Bottom Book Base Cover Edge -->
+  <path d="M21 101 L31 97 L96 101 L86 105 Z" fill="#0d241b" />
+  <!-- Golden bookmark ribbon poking out -->
+  <path d="M96 93 L106 94 L102 98 L108 102 L96 97 Z" fill="#ffcd20" filter="url(#shadow-learn)" />
+
+  <!-- ==================== BOOK 2 (MIDDLE) ==================== -->
+  <!-- Middle Book Spine Curve (Slightly rotated) -->
+  <path d="M26 73 C24 77 24 81 27 85 L37 81 C34 77 34 73 37 69 Z" fill="url(#book-mid-spine)" stroke="#95d5b2" stroke-width="0.8" />
+  <!-- Middle Book Top Cover -->
+  <path d="M28 73 L37 69 L94 73 L85 79 Z" fill="url(#book-mid-cover)" stroke="#57c501" stroke-width="0.7" />
+  <!-- Middle Book Pages -->
+  <path d="M37 70 L93 74 L90 82 L34 79 Z" fill="url(#book-pages)" />
+  <!-- Page line details -->
+  <line x1="37" y1="74" x2="92" y2="77" stroke="#a0c5ad" stroke-width="0.8" opacity="0.6" />
+  <line x1="36" y1="78" x2="91" y2="81" stroke="#a0c5ad" stroke-width="0.8" opacity="0.6" />
+  <!-- Spine decorative gold band -->
+  <path d="M25 76 C24 78 24 79 26 81" stroke="#ffcd20" stroke-width="1.4" stroke-linecap="round" />
+
+  <!-- ==================== GRADUATION CAP (TOP) ==================== -->
+  <!-- Skull Cap Base (under the rhomboid) -->
+  <path d="M44 48 C44 42 76 42 76 48 L73 59 C73 63 47 63 47 59 Z" fill="url(#cap-skull)" filter="url(#shadow-learn)" stroke="#058501" stroke-width="1" />
+  <!-- Skull Cap Rib Trim -->
+  <path d="M46 56 C52 60 68 60 74 56" stroke="#66cb01" stroke-width="1.2" fill="none" opacity="0.7" />
+
+  <!-- 3D Mortarboard Rhombus Top -->
+  <!-- Bottom thickness / bevel of cap plate -->
+  <polygon points="60,25 98,39 60,53 22,39" fill="#0a1d15" />
+  <polygon points="60,28 98,42 98,39 60,25" fill="#034f01" />
+  <polygon points="60,56 98,42 98,39 60,53" fill="#123527" />
+  <polygon points="60,56 22,42 22,39 60,53" fill="#245842" />
+
+  <!-- Main Cap Diamond Surface -->
+  <polygon points="60,25 98,39 60,53 22,39" fill="url(#cap-top)" stroke="#57c501" stroke-width="1.2" filter="url(#shadow-learn)" />
+
+  <!-- Glossy Diagonal Highlight on Cap -->
+  <polygon points="60,26 84,35 60,45 36,36" fill="#ffffff" opacity="0.12" />
+
+  <!-- Center Golden Button on Cap -->
+  <ellipse cx="60" cy="39" rx="3.5" ry="2.2" fill="#fff1b0" stroke="#b45309" stroke-width="0.8" />
+
+  <!-- Flowing 3D Golden Tassel -->
+  <!-- Tassel Cord -->
+  <path d="M60 39 Q72 37 80 44 Q86 49 87 56" fill="none" stroke="url(#gold-tassel)" stroke-width="2" stroke-linecap="round" />
+  <!-- Tassel Ring -->
+  <circle cx="87" cy="57" r="2.2" fill="#ffcd20" stroke="#b45309" stroke-width="0.7" />
+  <!-- Tassel Fringe Body -->
+  <path d="M85 59 L89 59 L91 71 L83 71 Z" fill="url(#gold-tassel)" />
+  <!-- Tassel Fringe Strands -->
+  <line x1="84.5" y1="71" x2="84" y2="73.5" stroke="#ffcd20" stroke-width="1" />
+  <line x1="87" y1="71" x2="87" y2="74" stroke="#fff1b0" stroke-width="1" />
+  <line x1="89.5" y1="71" x2="90" y2="73.5" stroke="#f59e0b" stroke-width="1" />
+
+  <!-- Little Sparkle on Cap -->
+  <path d="M38 31 L40 33 L38 35 L36 33 Z" fill="#ffcd20" opacity="0.85" />
+</svg>

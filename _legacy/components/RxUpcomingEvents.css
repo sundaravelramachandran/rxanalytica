@@ -1,0 +1,1176 @@
+
+/* ========================================================================== 
+   Rx Upcoming Events - Segregated 3D Flip Cards (Rx Live & Rx Exam)
+   ========================================================================== */
+
+.rx-events-section {
+  position: relative;
+  padding: 96px 0;
+  background: radial-gradient(ellipse at 8% 12%, rgba(5, 133, 1, 0.08), transparent 38%),
+              radial-gradient(ellipse at 92% 88%, rgba(255, 205, 32, 0.12), transparent 42%),
+              linear-gradient(180deg, #faf8f3 0%, #f4fbf1 50%, #ffffff 100%) !important;
+  overflow: hidden;
+}
+
+.rx-events-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1200px) {
+  .rx-events-section > .container.ed-container {
+    width: calc(100% - clamp(36px, 5vw, 100px));
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+/* Main Section Header */
+.rx-events__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 46px;
+}
+
+.rx-events__badge {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(5, 133, 1, 0.09);
+  border: 1px solid rgba(5, 133, 1, 0.22);
+  color: #48a92a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.rx-events__title {
+  margin: 0 0 12px;
+  color: #111111;
+  font-size: clamp(34px, 4.2vw, 48px);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+.rx-events__title span {
+  color: #48a92a;
+}
+
+.rx-events__subtitle {
+  margin: 0;
+  color: #4a5e51;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Segregated 2-Column Grid Architecture with Dotted Divider */
+.rx-events-columns-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 20px;
+}
+
+.rx-events-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Architectural Group Banners centered at top of each two cards */
+.rx-group-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1.5px solid rgba(5, 133, 1, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(10, 46, 29, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  margin-bottom: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.rx-group-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px -8px rgba(10, 46, 29, 0.12), 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.rx-group-banner--live {
+  background: linear-gradient(135deg, #ffffff 0%, #f7fdf5 100%);
+  border-color: rgba(5, 133, 1, 0.22);
+}
+
+.rx-group-banner--exam {
+  background: linear-gradient(135deg, #ffffff 0%, #fffdf4 100%);
+  border-color: rgba(212, 163, 0, 0.28);
+}
+
+.rx-group-banner__bar {
+  height: 4px;
+  width: 100%;
+}
+
+.rx-group-banner--live .rx-group-banner__bar {
+  background: linear-gradient(90deg, #058501 0%, #57c501 100%);
+}
+
+.rx-group-banner--exam .rx-group-banner__bar {
+  background: linear-gradient(90deg, #d4a300 0%, #ffcd20 100%);
+}
+
+.rx-group-banner__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px 12px;
+}
+
+.rx-group-banner__identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rx-group-banner__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.rx-group-banner:hover .rx-group-banner__icon {
+  transform: scale(1.06);
+}
+
+.rx-group-banner__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.rx-group-banner__icon--live {
+  background: linear-gradient(135deg, #058501 0%, #0d9f08 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(5, 133, 1, 0.32);
+}
+
+.rx-group-banner__icon--exam {
+  background: linear-gradient(135deg, #111111 0%, #2a2a2a 100%);
+  color: #ffcd20;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+.rx-group-banner__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rx-group-banner__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rx-group-banner__tag--live {
+  color: #48a92a;
+}
+
+.rx-group-banner__tag--exam {
+  color: #926f00;
+}
+
+.rx-group-banner__beacon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: rxPulseBeacon 1.8s ease-in-out infinite;
+}
+
+.rx-group-banner__beacon--live {
+  background: #058501;
+  box-shadow: 0 0 0 0 rgba(5, 133, 1, 0.7);
+}
+
+.rx-group-banner__beacon--exam {
+  background: #ffcd20;
+  box-shadow: 0 0 0 0 rgba(255, 205, 32, 0.7);
+}
+
+@keyframes rxPulseBeacon {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 133, 1, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(5, 133, 1, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 133, 1, 0);
+  }
+}
+
+.rx-group-banner--exam .rx-group-banner__beacon--exam {
+  animation-name: rxPulseBeaconExam;
+}
+
+@keyframes rxPulseBeaconExam {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 163, 0, 0.65);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(212, 163, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 163, 0, 0);
+  }
+}
+
+.rx-group-banner__title {
+  margin: 0;
+  font-size: clamp(21px, 2.1vw, 25px);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #48a92a;
+}
+
+.rx-group-banner--exam .rx-group-banner__title {
+  color: #111111;
+}
+
+.rx-group-banner__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.rx-group-banner__chip--live {
+  background: rgba(5, 133, 1, 0.08);
+  color: #48a92a;
+  border: 1px solid rgba(5, 133, 1, 0.22);
+}
+
+.rx-group-banner__chip--exam {
+  background: rgba(255, 205, 32, 0.22);
+  color: #6a5100;
+  border: 1px solid rgba(212, 163, 0, 0.36);
+}
+
+.rx-group-banner__chip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.rx-group-banner__chip-dot--live {
+  background: #058501;
+}
+
+.rx-group-banner__chip-dot--exam {
+  background: #d4a300;
+}
+
+.rx-group-banner__footer {
+  padding: 8px 20px 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.rx-group-banner__desc {
+  margin: 0;
+  font-size: 13.5px;
+  color: #4a5f51;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .rx-group-banner__main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .rx-group-banner__chip {
+    align-self: flex-start;
+  }
+}
+
+/* 2 Cards Grid inside each group */
+.rx-events-group__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+/* Vertical Dotted Segregation Line */
+.rx-events-segregation-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+}
+
+.rx-events-segregation-divider__line {
+  width: 0;
+  height: 100%;
+  min-height: 620px;
+  border-left: 3px dotted #058501;
+  opacity: 0.48;
+}
+
+.rx-events-segregation-divider__badge {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px dotted #058501;
+  color: #48a92a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  box-shadow: 0 4px 14px rgba(5, 133, 1, 0.16);
+}
+
+/* Responsive Segregation Layout */
+@media (max-width: 1199.98px) {
+  .rx-events-columns-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .rx-events-segregation-divider {
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .rx-events-segregation-divider__line {
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    border-left: none;
+    border-top: 3px dotted #058501;
+    opacity: 0.55;
+  }
+
+  .rx-events-segregation-divider__badge {
+    position: relative;
+    top: auto;
+    transform: none;
+    margin-top: -16px;
+  }
+}
+
+@media (max-width: 639.98px) {
+  .rx-events-columns-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .rx-events-group {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rx-events-segregation-divider {
+    display: none !important;
+  }
+
+  .rx-events-group__grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    gap: 18px;
+  }
+
+  .rx-flip-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .rx-flip-card__inner {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+  }
+
+  .rx-flip-card__media {
+    height: 210px;
+    min-height: 210px;
+  }
+}
+
+/* Card 3D Perspective Wrapper */
+.rx-flip-card {
+  perspective: 1200px;
+  height: 100%;
+}
+
+.rx-flip-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 590px;
+  border-radius: 26px;
+  transition: transform 0.75s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-style: preserve-3d;
+}
+
+/* Hover to flip the cards (desktop) and touch toggle (mobile) */
+.rx-flip-card:hover .rx-flip-card__inner,
+.rx-flip-card.is-flipped .rx-flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.rx-flip-card__front,
+.rx-flip-card__back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 26px;
+  background: #ffffff;
+  border: 1.5px solid rgba(5, 133, 1, 0.16);
+  box-shadow: 0 16px 42px rgba(10, 46, 29, 0.08), 0 3px 8px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.rx-flip-card:hover .rx-flip-card__front,
+.rx-flip-card:hover .rx-flip-card__back {
+  border-color: rgba(5, 133, 1, 0.38);
+  box-shadow: 0 24px 60px rgba(10, 46, 29, 0.14), 0 6px 18px rgba(5, 133, 1, 0.07);
+}
+
+/* ==========================================================================
+   FRONT SIDE
+   ========================================================================== */
+.rx-flip-card__front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.rx-flip-card__media {
+  position: relative;
+  height: 310px;
+  min-height: 310px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e4f7dc 0%, #edf9e8 100%);
+}
+
+.rx-flip-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.rx-flip-card:hover .rx-flip-card__media img {
+  transform: scale(1.06);
+}
+
+.rx-flip-card__category-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  z-index: 2;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(10, 46, 29, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 11.5px;
+  font-weight: 750;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.rx-flip-card__live-pill {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #48a92a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.rx-flip-card__pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #058501;
+  animation: rxPulseDot 2s ease-in-out infinite;
+}
+
+@keyframes rxPulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.75;
+  }
+}
+
+/* Front Card Body */
+.rx-flip-card__body {
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.rx-flip-card__topic {
+  margin: 0 0 14px;
+  color: #111111;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  min-height: 48px;
+}
+
+/* Date & Time Widget */
+.rx-flip-card__datetime {
+  background: #f7fcf4;
+  border: 1px solid rgba(5, 133, 1, 0.15);
+  border-radius: 14px;
+  padding: 11px 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.rx-flip-card__datetime-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.rx-flip-card__datetime-row svg {
+  color: #48a92a;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+}
+
+.rx-flip-card__datetime-row strong {
+  color: #48a92a;
+  font-weight: 800;
+}
+
+.rx-flip-card__datetime-row span {
+  color: #384e41;
+  font-weight: 600;
+}
+
+/* Front Actions (Register Now) */
+.rx-flip-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.rx-btn-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffda35 0%, #ffc51a 100%);
+  color: #48a92a !important;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+  border: none;
+  box-shadow: 0 6px 18px rgba(194, 143, 0, 0.22);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+
+.rx-btn-register:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #49c91f 0%, #168c25 100%);
+  box-shadow: 0 10px 24px rgba(5, 133, 1, 0.35);
+  color: #ffffff !important;
+}
+
+.rx-btn-register svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.rx-btn-register:hover svg {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   BACK SIDE (Highlights & Benefits)
+   ========================================================================== */
+.rx-flip-card__back {
+  transform: rotateY(180deg);
+  background: linear-gradient(165deg, #ffffff 0%, #f4fbf0 100%);
+  border-color: rgba(5, 133, 1, 0.28);
+  padding: 24px 20px 24px;
+}
+
+.rx-flip-card__back-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1.5px solid rgba(5, 133, 1, 0.14);
+  margin-bottom: 16px;
+}
+
+.rx-flip-card__back-tag {
+  font-size: 12.5px;
+  font-weight: 850;
+  color: #48a92a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Back Sections with custom 3px thin scrollbar */
+.rx-flip-card__back-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  flex: 1;
+  margin-bottom: 16px;
+  padding-right: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: #058501 rgba(5, 133, 1, 0.08);
+}
+
+.rx-flip-card__back-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.rx-flip-card__back-content::-webkit-scrollbar-track {
+  background: rgba(5, 133, 1, 0.05);
+  border-radius: 99px;
+}
+
+.rx-flip-card__back-content::-webkit-scrollbar-thumb {
+  background: #058501;
+  border-radius: 99px;
+}
+
+.rx-flip-card__back-content::-webkit-scrollbar-thumb:hover {
+  background: #046e01;
+}
+
+.rx-back-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.rx-back-section__title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 850;
+  color: #111111;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.rx-back-section__title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #058501;
+  color: #ffffff;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+.rx-back-section__title-icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.rx-back-section__title-icon--benefits {
+  background: #ffcd20;
+  color: #111111;
+}
+
+.rx-back-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.rx-back-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #2b3d30;
+  font-weight: 550;
+}
+
+.rx-back-list li svg {
+  color: #48a92a;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rx-back-list--benefits li svg {
+  color: #9e7400;
+}
+
+/* Back Action Footer */
+.rx-flip-card__back-actions {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+/* Final phone layout: stack each topic with its cards and remove the divider. */
+@media (max-width: 639.98px) {
+  .rx-events-columns-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+  }
+
+  .rx-events-group {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .rx-events-segregation-divider {
+    display: none !important;
+  }
+
+  .rx-events-group__grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    gap: 18px !important;
+  }
+
+  .rx-flip-card {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .rx-flip-card__inner {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 500px !important;
+  }
+
+  .rx-flip-card__front,
+  .rx-flip-card__back {
+    height: 100% !important;
+    min-height: 500px !important;
+  }
+
+  .rx-flip-card__media {
+    height: 210px !important;
+    min-height: 210px !important;
+  }
+}
+
+/* Separate card palettes, Anton event titles, and a shared one-line schedule row. */
+.rx-events-group--live {
+  --rx-event-accent: #eb3752;
+  --rx-event-accent-rgb: 235, 55, 82;
+}
+
+.rx-events-group--exam {
+  --rx-event-accent: #455ae1;
+  --rx-event-accent-rgb: 69, 90, 225;
+}
+
+.rx-flip-card__topic {
+  min-height: 82px;
+  color: var(--rx-event-accent, #183322);
+  font-family: 'Anton', Impact, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.rx-flip-card__datetime {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border-color: rgba(var(--rx-event-accent-rgb, 5, 133, 1), .2);
+  background: rgba(var(--rx-event-accent-rgb, 5, 133, 1), .055);
+}
+
+.rx-flip-card__datetime-row {
+  min-width: 0;
+  gap: 5px;
+  font-size: 9px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.rx-flip-card__datetime-row svg {
+  width: 12px;
+  height: 12px;
+  color: var(--rx-event-accent, #058501);
+}
+
+.rx-flip-card__datetime-row strong,
+.rx-flip-card__datetime-row span {
+  min-width: 0;
+  overflow: hidden;
+  color: #34443a;
+  font-size: 9px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rx-flip-card__datetime-row strong { color: var(--rx-event-accent, #058501); }
+
+.rx-flip-card__category-badge {
+  background: rgba(var(--rx-event-accent-rgb, 10, 46, 29), .92);
+}
+
+.rx-flip-card__live-pill { color: var(--rx-event-accent, #058501); }
+.rx-flip-card__pulse-dot { background: var(--rx-event-accent, #058501); }
+
+.rx-flip-card__back {
+  border-color: rgba(var(--rx-event-accent-rgb, 5, 133, 1), .3);
+  background: linear-gradient(165deg, #fff 0%, rgba(var(--rx-event-accent-rgb, 244, 251, 240), .055) 100%);
+}
+
+.rx-flip-card__back-header { border-bottom-color: rgba(var(--rx-event-accent-rgb, 5, 133, 1), .22); }
+.rx-flip-card__back-tag { color: var(--rx-event-accent, #058501); }
+.rx-back-section__title-icon { background: var(--rx-event-accent, #058501); }
+.rx-back-section__title-icon--benefits { background: var(--rx-event-accent, #ffcd20); color: #fff; }
+.rx-back-list li svg { color: var(--rx-event-accent, #058501); }
+.rx-back-list--benefits li svg { color: var(--rx-event-accent, #058501); }
+
+.rx-flip-card__back-content {
+  scrollbar-color: var(--rx-event-accent, #058501) rgba(var(--rx-event-accent-rgb, 5, 133, 1), .1);
+}
+
+.rx-flip-card__back-content::-webkit-scrollbar-thumb { background: var(--rx-event-accent, #058501); }
+.rx-flip-card__back-content::-webkit-scrollbar-thumb:hover { background: var(--rx-event-accent, #046e01); }
+
+.rx-group-banner--live .rx-group-banner__bar,
+.rx-group-banner--exam .rx-group-banner__bar {
+  background: linear-gradient(90deg, var(--rx-event-accent), color-mix(in srgb, var(--rx-event-accent) 70%, white));
+}
+
+.rx-group-banner--live { background: linear-gradient(135deg, #fff, rgba(235, 55, 82, .055)); border-color: rgba(235, 55, 82, .23); }
+.rx-group-banner--exam { background: linear-gradient(135deg, #fff, rgba(69, 90, 225, .055)); border-color: rgba(69, 90, 225, .23); }
+
+.rx-group-banner--live .rx-group-banner__icon,
+.rx-group-banner--exam .rx-group-banner__icon {
+  background: var(--rx-event-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(var(--rx-event-accent-rgb), .25);
+}
+
+.rx-group-banner--live .rx-group-banner__tag,
+.rx-group-banner--exam .rx-group-banner__tag,
+.rx-group-banner--live .rx-group-banner__title,
+.rx-group-banner--exam .rx-group-banner__title {
+  color: var(--rx-event-accent);
+}
+
+.rx-group-banner--live .rx-group-banner__chip,
+.rx-group-banner--exam .rx-group-banner__chip {
+  border-color: rgba(var(--rx-event-accent-rgb), .2);
+  color: var(--rx-event-accent);
+}
+
+.rx-group-banner--live .rx-group-banner__chip-dot,
+.rx-group-banner--exam .rx-group-banner__chip-dot,
+.rx-group-banner--live .rx-group-banner__beacon,
+.rx-group-banner--exam .rx-group-banner__beacon {
+  background: var(--rx-event-accent);
+}
+
+.rx-events-group--live .rx-flip-card__front,
+.rx-events-group--live .rx-flip-card__back { border-color: rgba(235, 55, 82, .22); }
+.rx-events-group--exam .rx-flip-card__front,
+.rx-events-group--exam .rx-flip-card__back { border-color: rgba(69, 90, 225, .22); }
+
+.rx-events-group--live .rx-flip-card:hover .rx-flip-card__front,
+.rx-events-group--live .rx-flip-card:hover .rx-flip-card__back { border-color: rgba(235, 55, 82, .5); }
+.rx-events-group--exam .rx-flip-card:hover .rx-flip-card__front,
+.rx-events-group--exam .rx-flip-card:hover .rx-flip-card__back { border-color: rgba(69, 90, 225, .5); }
+
+.rx-events-group--live .rx-btn-register {
+  background: #eb3752;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(235, 55, 82, .24);
+}
+
+.rx-events-group--live .rx-btn-register:hover {
+  background: #cf2942;
+  box-shadow: 0 10px 24px rgba(235, 55, 82, .34);
+  color: #fff !important;
+}
+
+.rx-events-group--exam .rx-btn-register {
+  background: #455ae1;
+  color: #fff !important;
+  box-shadow: 0 6px 18px rgba(69, 90, 225, .24);
+}
+
+.rx-events-group--exam .rx-btn-register:hover {
+  background: #3446c5;
+  box-shadow: 0 10px 24px rgba(69, 90, 225, .34);
+  color: #fff !important;
+}
+
+@media (max-width: 639.98px) {
+  .rx-flip-card__topic { min-height: 70px; font-size: 19px; }
+  .rx-flip-card__datetime { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
+}
+/* Match the site font and yellow accent while retaining each label's text color. */
+.rx-events-section {
+  font-family: var(--ed-font-family, inherit);
+}
+
+.rx-flip-card__topic {
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.rx-events-section .rx-events__badge,
+.rx-events-section .rx-flip-card__category-badge,
+.rx-events-section .rx-flip-card__live-pill,
+.rx-events-section .rx-group-banner__chip {
+  background: #ffcd20;
+}
+
+.rx-events-section .rx-btn-register,
+.rx-events-section .rx-events-group--live .rx-btn-register,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  background: #ffcd20;
+}
+
+.rx-events-section .rx-events-group--live .rx-btn-register:hover,
+.rx-events-section .rx-events-group--exam .rx-btn-register:hover {
+  background: #f2bd12;
+}
+/* Keep date and time columns and their icon/label alignment consistent on every card. */
+.rx-events-section .rx-flip-card__datetime {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+}
+
+.rx-events-section .rx-flip-card__datetime-row {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  align-items: center;
+  min-width: 0;
+}
+
+/* Align each event card's topic and date/time rows across the grid. */
+.rx-events-section .rx-flip-card__topic {
+  display: -webkit-box;
+  height: 82px;
+  min-height: 82px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.rx-events-section .rx-flip-card__datetime {
+  height: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  padding: 6px 10px;
+}
+/* Reduce the gap between event date/time and the register button. */
+.rx-events-section .rx-flip-card__datetime {
+  margin-bottom: 8px;
+}
+
+.rx-events-section .rx-flip-card__datetime {
+  transform: translateY(10px);
+}
+
+/* Keep the date/time badge and register action together below the full topic. */
+.rx-events-section .rx-flip-card__topic {
+  display: block;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  margin-bottom: 18px;
+}
+
+.rx-events-section .rx-flip-card__footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.rx-events-section .rx-flip-card__datetime {
+  margin: 0;
+  transform: none;
+}
+
+.rx-events-section .rx-flip-card__actions {
+  margin-top: 0;
+}
+
+/* Differentiate live and exam event badges and actions with black labels. */
+.rx-events-section .rx-events-group--live .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--live .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--live .rx-group-banner__chip,
+.rx-events-section .rx-events-group--live .rx-btn-register {
+  background: #ec4899;
+  color: #000;
+}
+
+.rx-events-section .rx-events-group--exam .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--exam .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--exam .rx-group-banner__chip,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  background: #3b82f6;
+  color: #000;
+}
+
+.rx-events-section .rx-events-group--live .rx-btn-register:hover {
+  background: #db2777;
+}
+
+.rx-events-section .rx-events-group--exam .rx-btn-register:hover {
+  background: #2563eb;
+}
+
+.rx-events-section .rx-events-group--live .rx-btn-register,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  color: #000 !important;
+}
+
+.rx-events-section .rx-events-group--live .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--live .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--live .rx-group-banner__chip,
+.rx-events-section .rx-events-group--live .rx-btn-register {
+  background-color: #eb3752;
+}
+
+.rx-events-section .rx-events-group--exam .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--exam .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--exam .rx-group-banner__chip,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  background-color: #455ae1;
+}
+
+/* Softer event colors with high-contrast white labels. */
+.rx-events-section .rx-events-group--live .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--live .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--live .rx-group-banner__chip,
+.rx-events-section .rx-events-group--live .rx-btn-register {
+  background-color: #ef5c72;
+  color: #fff;
+}
+
+.rx-events-section .rx-events-group--exam .rx-flip-card__category-badge,
+.rx-events-section .rx-events-group--exam .rx-flip-card__live-pill,
+.rx-events-section .rx-events-group--exam .rx-group-banner__chip,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  background-color: #6979e7;
+  color: #fff;
+}
+
+.rx-events-section .rx-events-group--live .rx-btn-register,
+.rx-events-section .rx-events-group--exam .rx-btn-register {
+  color: #fff !important;
+}
+
+.rx-events-section .rx-flip-card__topic {
+  color: #000;
+}
+.rx-events-section .rx-flip-card__topic {
+  font-weight: 600;
+}
